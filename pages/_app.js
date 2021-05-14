@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Footer from '../components/footer';
+import HeroSection from '../components/hero';
 import Navbar from '../components/navbar';
 import Sidebar from '../components/sidebar';
 import '../styles/globals.css';
@@ -16,7 +17,6 @@ function MyApp({ Component, pageProps }) {
       <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
       <Navbar handleToggle={handleToggle} />
       <Component {...pageProps} />
-      <Footer />
     </>
   );
 }
