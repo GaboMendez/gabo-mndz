@@ -26,7 +26,7 @@ const Navbar = ({ handleToggle }) => {
             <NavbarItem path={'/'} title={'Home'} />
             <NavbarItem path={'/about'} title={'About'} />
             <NavbarItem path={'/discover'} title={'Discover'} />
-            <NavbarItem path={'/services'} title={'Services'} />
+            <NavbarItem path={'/skills'} title={'Skills'} />
           </NavbarMenu>
         </NavbarContainer>
       </Nav>

@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import Head from 'next/head';
-
+import { useState } from 'react';
 import Footer from '../components/footer';
-import HeroSection from '../components/hero';
 import Navbar from '../components/navbar';
 import Sidebar from '../components/sidebar';
 import '../styles/globals.css';
@@ -28,11 +26,15 @@ function MyApp({ Component, pageProps }) {
           href='https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,400;0,700;1,700&family=Hammersmith+One&display=swap'
           rel='stylesheet'
         />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Roboto&display=swap'
+          rel='stylesheet'
+        />
       </Head>
-      
       <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
       <Navbar handleToggle={handleToggle} />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

@@ -22,7 +22,7 @@ const Sidebar = ({ isOpen, handleToggle }) => {
             <SidebarItem path={'/'} title={'Home'} />
             <SidebarItem path={'/about'} title={'About'} />
             <SidebarItem path={'/discover'} title={'Discover'} />
-            <SidebarItem path={'/services'} title={'Services'} />
+            <SidebarItem path={'/skills'} title={'Skills'} />
           </SidebarMenu>
         </SidebarWrapper>
       </SidebarContainer>

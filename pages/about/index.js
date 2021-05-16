@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import InfoSection from '../../components/info-section';
+import { discoverObj } from '../../components/info-section/data';
 
 const Title = styled.h2`
   color: red;
@@ -12,12 +14,7 @@ const About = () => {
     setName('Josue...');
   };
 
-  return (
-    <div style={{ padding: 100 }}>
-      <Title>Hey i'm ABOUT! and this is {name}</Title>
-      <button onClick={handleClick}>Change Name</button>
-    </div>
-  );
+  return <InfoSection {...discoverObj} />;
 };
 
 export default About;

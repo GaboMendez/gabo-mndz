@@ -1,17 +1,25 @@
-import { FooterSection } from './styles';
+import {
+  FooterContainer,
+  FooterWrapper,
+  LinkItems,
+  LinksContainer,
+  LinksWrapper,
+  LinkTitle,
+  WebsiteRights,
+} from './styles';
+import Link from 'next/link';
+import SocialMedia from '../social-media';
 
 const Footer = () => {
   return (
-    <FooterSection>
-      <a
-        href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        Powered by
-        <img src='/vercel.svg' alt='Vercel Logo' className='logo' />
-      </a>
-    </FooterSection>
+    <FooterContainer>
+      <FooterWrapper>
+        <SocialMedia />
+        <WebsiteRights>
+          COPYRIGHT © {new Date().getFullYear()} ALL RIGHTS RESERVED.
+        </WebsiteRights>
+      </FooterWrapper>
+    </FooterContainer>
   );
 };
 
