@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Head from 'next/head';
+
 import Footer from '../components/footer';
 import HeroSection from '../components/hero';
 import Navbar from '../components/navbar';
@@ -14,6 +16,20 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <title>gabo-dev</title>
+        <link rel='icon' href='/command.png' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&display=swap'
+          rel='stylesheet'
+        />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,400;0,700;1,700&family=Hammersmith+One&display=swap'
+          rel='stylesheet'
+        />
+      </Head>
+      
       <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
       <Navbar handleToggle={handleToggle} />
       <Component {...pageProps} />

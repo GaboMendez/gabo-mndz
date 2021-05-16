@@ -2,11 +2,12 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
+  background: #000;
   height: 80px;
+  margin-top: -80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #000;
   margin-top: -80px;
   font-size: 1rem;
   position: sticky;
@@ -14,7 +15,7 @@ export const Nav = styled.nav`
   z-index: 10;
 
   @media screen and (max-width: 960px) {
-    transition: 0.8s all;
+    transition: 0.8s all ease;
   }
 `;
 
@@ -79,5 +80,10 @@ export const NavItemWrapper = styled.li`
 
   &.active {
     border-bottom: 3px solid #009ddc;
+  }
+
+  &:hover {
+    color: #009ddc;
+    transition: 0.2s ease-in-out;
   }
 `;

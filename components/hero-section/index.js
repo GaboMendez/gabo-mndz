@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroBg, HeroContainer, VideoBg } from './HeroElements';
+import { Description, HeroBg, HeroContainer, HeroContent, Title, VideoBg } from './styles';
 
 const HeroSection = () => {
   return (
@@ -13,6 +13,10 @@ const HeroSection = () => {
           type='video/mp4'
         />
       </HeroBg>
+      <HeroContent>
+        <Title>Gabriel Mendez</Title>
+        <Description>Software Engineer</Description>
+      </HeroContent>
     </HeroContainer>
   );
 };

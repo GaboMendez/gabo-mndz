@@ -13,7 +13,7 @@ const About = () => {
   };
 
   return (
-    <div style={{ margin: 25 }}>
+    <div style={{ padding: 100 }}>
       <Title>Hey i'm ABOUT! and this is {name}</Title>
       <button onClick={handleClick}>Change Name</button>
     </div>
