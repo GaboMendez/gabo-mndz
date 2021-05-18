@@ -1,13 +1,13 @@
+import Link from 'next/link';
+import { FaBars } from 'react-icons/fa';
+import NavbarItem from './NavbarItem';
 import {
+  MobileIcon,
   Nav,
   NavbarContainer,
-  NavLogo,
   NavbarMenu,
-  MobileIcon,
+  NavLogo,
 } from './styles';
-import { FaBars } from 'react-icons/fa';
-import Link from 'next/link';
-import NavbarItem from './NavbarItem';
 
 export const items = [
   { id: 1, path: 'home', title: 'Home' },

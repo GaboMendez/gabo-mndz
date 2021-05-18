@@ -1,11 +1,8 @@
-//import Link from 'next/link';
-import { Link, animateScroll as scroll } from 'react-scroll';
-
 import React from 'react';
+import { Link } from 'react-scroll';
 import { SidebarItemWrapper } from './styles';
 
 const SidebarItem = ({ path, title, isOpen, handleToggle }) => {
-  
   const handleSetActive = () => {
     if (isOpen) {
       handleToggle();
