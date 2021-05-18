@@ -1,15 +1,18 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { NavItemWrapper } from './styles';
+import { NavItem, NavItemWrapper } from './styles';
 
 const NavbarItem = ({ path, title }) => {
-  const router = useRouter();
-
   return (
-    <NavItemWrapper className={router.pathname == path ? 'active' : ''}>
-      <Link href={path} passHref>
-        {title}
-      </Link>
+    <NavItemWrapper>
+      <NavItem
+        activeClass='active'
+        to={path}
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        {!!title && title}
+      </NavItem>
     </NavItemWrapper>
   );
 };

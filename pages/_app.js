@@ -1,12 +1,17 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
+import Scroll from '../components/scroll';
 import Sidebar from '../components/sidebar';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual';
+  }, []);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -34,6 +39,7 @@ function MyApp({ Component, pageProps }) {
       <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
       <Navbar handleToggle={handleToggle} />
       <Component {...pageProps} />
+      <Scroll />
       <Footer />
     </>
   );

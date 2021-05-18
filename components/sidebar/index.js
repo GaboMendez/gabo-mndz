@@ -10,6 +10,13 @@ import {
   SidebarWrapper,
 } from './styles';
 
+export const items = [
+  { id: 1, path: 'home', title: 'Home' },
+  { id: 2, path: 'about', title: 'About' },
+  { id: 3, path: 'discover', title: 'Discover' },
+  { id: 4, path: 'skills', title: 'Skills' },
+];
+
 const Sidebar = ({ isOpen, handleToggle }) => {
   return (
     <>
@@ -19,10 +26,15 @@ const Sidebar = ({ isOpen, handleToggle }) => {
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarItem path={'/'} title={'Home'} />
-            <SidebarItem path={'/about'} title={'About'} />
-            <SidebarItem path={'/discover'} title={'Discover'} />
-            <SidebarItem path={'/skills'} title={'Skills'} />
+            {items.map((item) => (
+              <SidebarItem
+                key={item.id}
+                path={item.path}
+                title={item.title}
+                isOpen={isOpen}
+                handleToggle={handleToggle}
+              />
+            ))}
           </SidebarMenu>
         </SidebarWrapper>
       </SidebarContainer>

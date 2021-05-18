@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
@@ -39,10 +39,20 @@ export const NavLogo = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
+
+  &:hover {
+    color: #009ddc;
+    transition: 0.2s ease-in-out;
+  }
 `;
 
 export const MobileIcon = styled.div`
   display: none;
+
+  &:hover {
+    color: #009ddc;
+    transition: 0.2s ease-in-out;
+  }
 
   @media screen and (max-width: 768px) {
     color: #fff;
@@ -78,12 +88,14 @@ export const NavItemWrapper = styled.li`
   height: 100%;
   cursor: pointer;
 
-  &.active {
-    border-bottom: 3px solid #009ddc;
-  }
-
   &:hover {
     color: #009ddc;
     transition: 0.2s ease-in-out;
+  }
+`;
+
+export const NavItem = styled(Link)`
+  &.active {
+    border-bottom: 3px solid #009ddc;
   }
 `;

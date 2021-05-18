@@ -9,6 +9,13 @@ import { FaBars } from 'react-icons/fa';
 import Link from 'next/link';
 import NavbarItem from './NavbarItem';
 
+export const items = [
+  { id: 1, path: 'home', title: 'Home' },
+  { id: 2, path: 'about', title: 'About' },
+  { id: 3, path: 'discover', title: 'Discover' },
+  { id: 4, path: 'skills', title: 'Skills' },
+];
+
 const Navbar = ({ handleToggle }) => {
   return (
     <>
@@ -23,10 +30,9 @@ const Navbar = ({ handleToggle }) => {
             <FaBars />
           </MobileIcon>
           <NavbarMenu>
-            <NavbarItem path={'/'} title={'Home'} />
-            <NavbarItem path={'/about'} title={'About'} />
-            <NavbarItem path={'/discover'} title={'Discover'} />
-            <NavbarItem path={'/skills'} title={'Skills'} />
+            {items.map((item) => (
+              <NavbarItem key={item.id} path={item.path} title={item.title} />
+            ))}
           </NavbarMenu>
         </NavbarContainer>
       </Nav>
