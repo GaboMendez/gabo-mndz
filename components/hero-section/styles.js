@@ -89,21 +89,25 @@ export const CircleAvatar = styled.div`
     padding-top: 100%;
     /* initial ratio of 1:1*/
   }
-  
+
   @media screen and (max-width: 1350px) {
-    width: 18vw;
+    width: 19vw;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1150px) {
     width: 25vw;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 100px) {
+    width: 30vw;
+  }
+
+  @media screen and (max-width: 800px) {
     width: 35vw;
   }
 
-  @media screen and (max-width: 480px) {
-    width: 40vw;
+  @media screen and (max-width: 550px) {
+    width: 50vw;
   }
 `;
 
