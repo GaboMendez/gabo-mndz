@@ -7,10 +7,10 @@ import {
   SocialWrapper,
 } from './styles';
 
-const SocialMedia = () => {
+const SocialMedia = ({ style }) => {
   return (
     <>
-      <SocialContainer>
+      <SocialContainer style={style}>
         <SocialWrapper>
           <SocialIcons>
             <IconLink href='//link' target='_blank' aria-label='GitHub'>

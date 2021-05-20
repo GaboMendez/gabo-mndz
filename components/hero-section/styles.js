@@ -48,24 +48,71 @@ export const VideoBg = styled.video`
 
 export const HeroContent = styled.div`
   z-index: 3;
-  max-width: 1200px;
+  width: 100%;
+  min-height: 40%;
   position: absolute;
   padding: 8px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   //
-  background: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+
   padding: 1rem 2rem;
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 `;
 
-export const Title = styled.h1`
-  color: #000;
-  font-size: 48px;
-  text-align: center;
+export const CircleAvatar = styled.div`
+  position: relative;
+  width: 15vw;
+  background-position: center center;
+  background-size: cover;
+  background-color: #f2f1f1;
+  border-radius: 100%;
+  border: 0.15rem solid #000;
+  box-shadow: 0 0 0.5rem 0.3rem rgba(0, 0, 0, 0.2);
+  background-image: url('https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg');
 
+  transition: all 0.3s;
+  bottom: 150px;
+  z-index: 50;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+    /* initial ratio of 1:1*/
+  }
+  
+  @media screen and (max-width: 1350px) {
+    width: 18vw;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 25vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 35vw;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 40vw;
+  }
+`;
+
+export const Title = styled.h1`
+  color: #eeeeee;
+  font-weight: 400;
+  font-size: 46px;
+  text-align: center;
+  margin: 0;
   @media screen and (max-width: 768px) {
     font-size: 40px;
   }
@@ -76,12 +123,12 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.p`
+  color: #eeeeee;
   margin-top: 24px;
-  color: #000;
   font-size: 24px;
   text-align: center;
   max-width: 600px;
-
+  margin: 0;
   @media screen and (max-width: 768px) {
     font-size: 22px;
   }

@@ -1,5 +1,14 @@
 import React from 'react';
-import { Description, HeroBg, HeroContainer, HeroContent, Title, VideoBg } from './styles';
+import SocialMedia from '../social-media';
+import {
+  Description,
+  HeroBg,
+  HeroContainer,
+  HeroContent,
+  CircleAvatar,
+  Title,
+  VideoBg,
+} from './styles';
 
 const HeroSection = () => {
   return (
@@ -13,9 +22,14 @@ const HeroSection = () => {
           type='video/mp4'
         />
       </HeroBg>
+      <CircleAvatar />
+
       <HeroContent>
-        <Title>Gabriel Mendez</Title>
-        <Description>Software Engineer</Description>
+        <div style={{ padding: '60px 0 0 0' }}>
+          <SocialMedia style={{ paddingTop: '50px', paddingBottom: '20px'}} />
+          <Title>Gabriel Mendez</Title>
+          <Description>Software Engineer</Description>
+        </div>
       </HeroContent>
     </HeroContainer>
   );
