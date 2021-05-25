@@ -1,8 +1,8 @@
 export const aboutObj = {
   id: 'about',
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
   topLine: 'About',
   headLine: 'Some Text About Me...',
   description:
@@ -10,13 +10,13 @@ export const aboutObj = {
   imgStart: false,
   img: require('../../public/profile.svg'),
   alt: 'profile',
-  dark: false,
-  primary: false,
-  darkText: false,
+  dark: true,
+  primary: true,
+  darkText: true,
 };
 
 export const discoverObj = {
-  id: 'discover',
+  id: 'contact',
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
