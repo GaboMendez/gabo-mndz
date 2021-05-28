@@ -1,3 +1,4 @@
+import AboutSection from '../components/section-about';
 import HeroSection from '../components/section-hero';
 import InfoSection from '../components/section-info';
 import { aboutObj, discoverObj } from '../components/section-info/data';
@@ -7,7 +8,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <InfoSection {...aboutObj} />
+      <AboutSection />
       <SkillsSection />
       <InfoSection {...discoverObj} />
     </>
