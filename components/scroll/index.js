@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
 import { IoIosArrowDropupCircle } from 'react-icons/io';
+import { animateScroll as scroll } from 'react-scroll';
 import { ScrollWrapper } from './styles';
 
 const Scroll = () => {
