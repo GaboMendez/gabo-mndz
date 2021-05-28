@@ -1,15 +1,15 @@
 import React from 'react';
 import SocialMedia from '../social-media';
 import {
+  ButtonScroll,
+  ButtonWrapper,
+  CircleAvatar,
   Description,
   HeroBg,
   HeroContainer,
   HeroContent,
-  CircleAvatar,
   Title,
   VideoBg,
-  ButtonWrapper,
-  ButtonScroll,
 } from './styles';
 
 const HeroSection = () => {
@@ -38,7 +38,7 @@ const HeroSection = () => {
               to='about'
               spy={true}
               smooth={true}
-              offset={50}
+              offset={-60}
               duration={800}
             />
           </ButtonWrapper>

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { Button } from 'react-scroll';
+import styled from 'styled-components';
 
 export const HeroContainer = styled.div`
   background: #0c0c0c;
@@ -91,8 +91,8 @@ export const CircleAvatar = styled.div`
     /* initial ratio of 1:1*/
   }
 
-  @media screen and (max-width: 1350px) {
-    width: 20vw;
+  @media screen and (max-width: 1365px) {
+    width: 19vw;
   }
 
   @media screen and (max-width: 1250px) {
@@ -167,5 +167,6 @@ export const ButtonScroll = styled(Button)`
   &:hover {
     box-shadow: 0 0 10px 0 #0082c3 inset, 0 0 10px 4px #0082c3;
     transform: translate3d(0, -2px, 0);
+    font-weight: 580;
   }
 `;
