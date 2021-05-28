@@ -1,7 +1,7 @@
-import HeroSection from '../components/hero-section';
-import InfoSection from '../components/info-section';
-import { aboutObj, discoverObj } from '../components/info-section/data';
-import SkillsSection from '../components/skills-section';
+import HeroSection from '../components/section-hero';
+import InfoSection from '../components/section-info';
+import { aboutObj, discoverObj } from '../components/section-info/data';
+import SkillsSection from '../components/section-skills';
 
 export default function Home() {
   return (
