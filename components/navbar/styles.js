@@ -87,7 +87,7 @@ export const NavItemWrapper = styled.li`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-
+  font-size: 1.15rem;
   &:hover {
     color: #009ddc;
     transition: 0.2s ease-in-out;
