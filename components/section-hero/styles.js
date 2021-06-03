@@ -74,7 +74,7 @@ export const CircleAvatar = styled.div`
   border-radius: 100%;
   border: 0.15rem solid #000;
   box-shadow: 0 0 0.5rem 0.3rem rgba(0, 0, 0, 0.2);
-  background-image: url('https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg');
+  background-image: url('https://avatars.githubusercontent.com/u/54010882?v=4');
 
   transition: all 0.3s;
   bottom: 160px;
@@ -109,6 +109,14 @@ export const CircleAvatar = styled.div`
 
   @media screen and (max-width: 700px) {
     width: 40vw;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 50vw;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 55vw;
   }
 `;
 
@@ -164,9 +172,11 @@ export const ButtonScroll = styled(Button)`
   box-shadow: 0 0 40px 40px #0082c3 inset, 0 0 0 0 #0082c3;
   transition: all 150ms ease-in-out;
 
-  &:hover {
-    box-shadow: 0 0 10px 0 #0082c3 inset, 0 0 10px 4px #0082c3;
-    transform: translate3d(0, -2px, 0);
-    font-weight: 580;
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0 10px 0 #0082c3 inset, 0 0 10px 4px #0082c3;
+      transform: translate3d(0, -2px, 0);
+      font-weight: 580;
+    }
   }
 `;

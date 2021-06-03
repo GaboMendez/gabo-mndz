@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { animateScroll as scroll } from 'react-scroll';
 import { FaBars } from 'react-icons/fa';
 import NavbarItem from './NavbarItem';
 import {
@@ -17,14 +17,16 @@ export const items = [
 ];
 
 const Navbar = ({ handleToggle }) => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo>
-            <Link href='/' passHref>
-              <a>gabo-dev</a>
-            </Link>
+          <NavLogo onClick={scrollToTop}>
+            <img src={require('../../public/logo.jpg')} width={80} />
           </NavLogo>
           <MobileIcon onClick={handleToggle}>
             <FaBars />

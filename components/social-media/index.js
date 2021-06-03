@@ -13,17 +13,17 @@ const SocialMedia = ({ style }) => {
       <SocialContainer style={style}>
         <SocialWrapper>
           <SocialIcons>
-            <IconLink href='//link' target='_blank' aria-label='GitHub'>
+            <IconLink href='//github.com/GaboMendez' target='_blank'>
               <FaGithub />
             </IconLink>
-            <IconLink href='/' target='_blank' aria-label='Facebook'>
+            <IconLink href='//linkedin.com/in/gabrielmndz' target='_blank'>
+              <FaLinkedin />
+            </IconLink>
+            <IconLink href='//facebook.com/GaboMndzz' target='_blank'>
               <FaFacebook />
             </IconLink>
-            <IconLink href='/' target='_blank' aria-label='Twitter'>
+            <IconLink href='//twitter.com/Gabo_Mendz' target='_blank'>
               <FaTwitter />
-            </IconLink>
-            <IconLink href='/' target='_blank' aria-label='Linkedin'>
-              <FaLinkedin />
             </IconLink>
           </SocialIcons>
         </SocialWrapper>

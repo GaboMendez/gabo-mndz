@@ -10,10 +10,13 @@ export const ScrollWrapper = styled.div`
   //color: #f2994a; // good orange
   color: #b38867;
   transition: transform 250ms;
-  &:hover {
-    //color: #0ED2F7; // good orange
-    color: #ddbc95;
-    transition: 0.2s ease-in-out;
-    transform: translateY(-5px);
+
+  @media (hover: hover) {
+    &:hover {
+      //color: #0ED2F7; // good orange
+      color: #ddbc95;
+      transition: 0.2s ease-in-out;
+      transform: translateY(-5px);
+    }
   }
 `;

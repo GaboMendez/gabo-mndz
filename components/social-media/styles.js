@@ -23,9 +23,11 @@ export const SocialIcons = styled.div`
 export const IconLink = styled.a`
   color: #fff;
   font-size: 24px;
-    
-  &:hover {
-    color: #009ddc;
-    transition: 0.2s ease-in-out;
+
+  @media (hover: hover) {
+    &:hover {
+      color: #009ddc;
+      transition: 0.2s ease-in-out;
+    }
   }
 `;
