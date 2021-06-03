@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import InfoSection from '../../components/info-section';
-import { discoverObj } from '../../components/info-section/data';
+import InfoSection from '../../components/section-info';
+import { discoverObj } from '../../components/section-info/data';
 
 const Title = styled.h2`
   color: red;

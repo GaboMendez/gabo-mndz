@@ -76,8 +76,6 @@ export const TitleCard = styled.h2`
 `;
 
 export const TechContainer = styled.div`
-  display: flex;
-  flex-direction: row;
   padding: 20px;
   background: #419be0;
 
