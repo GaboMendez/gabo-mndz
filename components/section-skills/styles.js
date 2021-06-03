@@ -4,7 +4,7 @@ export const SkillsContainer = styled.div`
   height: 800px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background: #010606;
 
@@ -20,8 +20,8 @@ export const SkillsContainer = styled.div`
 export const Title = styled.h1`
   font-size: 2.5rem;
   color: #fff;
-  margin-bottom: 64px;
-
+  margin-bottom: 24px;
+  text-align: center;
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
@@ -33,8 +33,7 @@ export const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  grid-gap: 16px;
-  padding: 0 50px;
+  grid-gap: 56px;
 
   @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
@@ -74,4 +73,15 @@ export const IconCard = styled.img`
 export const TitleCard = styled.h2`
   font-size: 1rem;
   margin-bottom: 10px;
+`;
+
+export const TechContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  background: #419be0;
+
+  .slick-slide img {
+    margin: auto;
+  }
 `;
