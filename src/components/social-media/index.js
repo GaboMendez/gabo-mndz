@@ -41,7 +41,12 @@ const SocialMedia = ({ style }) => {
         <SocialWrapper>
           <SocialIcons>
             {items.map((item) => (
-              <IconLink href={item.link} title={item.name} target='_blank'>
+              <IconLink
+                key={item.id}
+                href={item.link}
+                title={item.name}
+                target='_blank'
+              >
                 {item.icon}
               </IconLink>
             ))}
