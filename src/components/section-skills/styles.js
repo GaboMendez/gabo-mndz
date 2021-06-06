@@ -77,9 +77,10 @@ export const TitleCard = styled.h2`
 
 export const TechContainer = styled.div`
   padding: 20px;
-  background: #419be0;
+  background: red;
+  height: 250px;
 
   .slick-slide img {
-    margin: auto;
+    margin: 5px;
   }
 `;

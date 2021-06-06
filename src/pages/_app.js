@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 import Scroll from '../components/scroll';

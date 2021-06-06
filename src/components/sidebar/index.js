@@ -8,7 +8,7 @@ import {
   SidebarWrapper,
 } from './styles';
 
-export const items = [
+const items = [
   { id: 1, path: 'home', title: 'Home' },
   { id: 2, path: 'about', title: 'About' },
   { id: 3, path: 'skills', title: 'Skills' },

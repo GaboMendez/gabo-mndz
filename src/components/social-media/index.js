@@ -7,24 +7,44 @@ import {
   SocialWrapper,
 } from './styles';
 
+const items = [
+  {
+    id: 1,
+    name: 'GitHub',
+    icon: <FaGithub />,
+    link: '//github.com/GaboMendez',
+  },
+  {
+    id: 2,
+    name: 'LinkedIn',
+    icon: <FaLinkedin />,
+    link: '//linkedin.com/in/gabrielmndz',
+  },
+  {
+    id: 3,
+    name: 'Facebook',
+    icon: <FaFacebook />,
+    link: '//facebook.com/GaboMndzz',
+  },
+  {
+    id: 4,
+    name: 'Twitter',
+    icon: <FaTwitter />,
+    link: '//twitter.com/Gabo_Mendz',
+  },
+];
+
 const SocialMedia = ({ style }) => {
   return (
     <>
       <SocialContainer style={style}>
         <SocialWrapper>
           <SocialIcons>
-            <IconLink href='//github.com/GaboMendez' target='_blank'>
-              <FaGithub />
-            </IconLink>
-            <IconLink href='//linkedin.com/in/gabrielmndz' target='_blank'>
-              <FaLinkedin />
-            </IconLink>
-            <IconLink href='//facebook.com/GaboMndzz' target='_blank'>
-              <FaFacebook />
-            </IconLink>
-            <IconLink href='//twitter.com/Gabo_Mendz' target='_blank'>
-              <FaTwitter />
-            </IconLink>
+            {items.map((item) => (
+              <IconLink href={item.link} title={item.name} target='_blank'>
+                {item.icon}
+              </IconLink>
+            ))}
           </SocialIcons>
         </SocialWrapper>
       </SocialContainer>
