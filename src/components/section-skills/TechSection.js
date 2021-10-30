@@ -8,7 +8,7 @@ const TechSection = () => {
   return (
     <>
       <h1 style={{ color: 'white', alignSelf: 'center' }}>TECHNOLOGIES</h1>
-      <TechContainer>
+      <TechContainer className="shadow-bg">
         <Slider
           slidesToShow={3}
           slidesToScroll={1}

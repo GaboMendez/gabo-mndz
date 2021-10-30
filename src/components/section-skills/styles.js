@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const SkillsContainer = styled.div`
   height: 800px;
+  padding: 0px 64px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -75,12 +76,13 @@ export const TitleCard = styled.h2`
 `;
 
 export const TechContainer = styled.div`
+  border-radius: 16px;
   background: #fff;
-  padding: 24px;
+  padding: 24px 0px;
   width: 100%;
   overflow: hidden;
 
   .slick-slide img {
-    margin: 18px 0px;
+    margin: 8px 0px;
   }
 `;

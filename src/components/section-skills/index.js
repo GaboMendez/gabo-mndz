@@ -16,15 +16,15 @@ const SkillsSection = () => {
       <SkillsContainer id='skills'>
         <Title>SKILLS</Title>
         <ContentWrapper>
-          <SkillsCard>
+          <SkillsCard className='shadow-bg'>
             <IconCard src={Icon1} />
             <TitleCard>ORACLE</TitleCard>
           </SkillsCard>
-          <SkillsCard>
+          <SkillsCard className='shadow-bg'>
             <IconCard src={Icon1} />
             <TitleCard>JavaScript</TitleCard>
           </SkillsCard>
-          <SkillsCard>
+          <SkillsCard className='shadow-bg'>
             <IconCard src={Icon1} />
             <TitleCard>React</TitleCard>
           </SkillsCard>
