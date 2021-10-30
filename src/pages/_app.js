@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import Slider from 'react-slick';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 import Scroll from '../components/scroll';
@@ -48,44 +47,6 @@ function MyApp({ Component, pageProps }) {
       <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
       <Navbar handleToggle={handleToggle} />
       <Component {...pageProps} />
-      <div
-        style={{
-          padding: 24,
-          width: '100%',
-          overflow: 'hidden',
-        }}
-      >
-        <Slider
-          slidesToShow={3}
-          slidesToScroll={1}
-          swipeToSlide={true}
-          focusOnSelect={true}
-          speed={500}
-          autoplaySpeed={3000}
-          cssEase={'linear'}
-          autoplay
-          dots
-        >
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
-      </div>
       <Scroll />
       <Footer />
     </>

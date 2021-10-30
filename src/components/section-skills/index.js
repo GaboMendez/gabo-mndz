@@ -14,24 +14,23 @@ const SkillsSection = () => {
   return (
     <>
       <SkillsContainer id='skills'>
-        <div>
-          <Title>SKILLS</Title>
-          <ContentWrapper>
-            <SkillsCard>
-              <IconCard src={Icon1} />
-              <TitleCard>ORACLE</TitleCard>
-            </SkillsCard>
-            <SkillsCard>
-              <IconCard src={Icon1} />
-              <TitleCard>JavaScript</TitleCard>
-            </SkillsCard>
-            <SkillsCard>
-              <IconCard src={Icon1} />
-              <TitleCard>React</TitleCard>
-            </SkillsCard>
-          </ContentWrapper>
-        </div>
-        <TechSection></TechSection>
+        <Title>SKILLS</Title>
+        <ContentWrapper>
+          <SkillsCard>
+            <IconCard src={Icon1} />
+            <TitleCard>ORACLE</TitleCard>
+          </SkillsCard>
+          <SkillsCard>
+            <IconCard src={Icon1} />
+            <TitleCard>JavaScript</TitleCard>
+          </SkillsCard>
+          <SkillsCard>
+            <IconCard src={Icon1} />
+            <TitleCard>React</TitleCard>
+          </SkillsCard>
+        </ContentWrapper>
+
+        <TechSection />
       </SkillsContainer>
     </>
   );

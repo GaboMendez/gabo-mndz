@@ -5,7 +5,6 @@ export const SkillsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
   background: #010606;
 
   @media screen and (max-width: 768px) {
@@ -76,11 +75,12 @@ export const TitleCard = styled.h2`
 `;
 
 export const TechContainer = styled.div`
-  padding: 20px;
-  background: red;
-  height: 250px;
+  background: #fff;
+  padding: 24px;
+  width: 100%;
+  overflow: hidden;
 
   .slick-slide img {
-    margin: 5px;
+    margin: 18px 0px;
   }
 `;
