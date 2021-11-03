@@ -28,6 +28,10 @@ const SkillsSection = () => {
             <IconCard src={Icon1} />
             <TitleCard>React</TitleCard>
           </SkillsCard>
+          <SkillsCard className='shadow-bg'>
+            <IconCard src={Icon1} />
+            <TitleCard>React</TitleCard>
+          </SkillsCard>
         </ContentWrapper>
 
         <TechSection />

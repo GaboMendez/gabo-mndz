@@ -2,18 +2,22 @@ import styled from 'styled-components';
 
 export const SkillsContainer = styled.div`
   height: 800px;
-  padding: 0px 64px;
+  padding: 0px 80px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background: #010606;
+
+  @media screen and (max-width: 1068px) {
+    height: 950px;
+  }
 
   @media screen and (max-width: 768px) {
     height: 1100px;
   }
 
   @media screen and (max-width: 480px) {
-    height: 1300px;
+    height: 1400px;
   }
 `;
 
@@ -31,11 +35,11 @@ export const ContentWrapper = styled.div`
   max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 56px;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1068px) {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -52,8 +56,8 @@ export const SkillsCard = styled.div`
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
-  max-height: 340px;
-  padding: 30px;
+  max-height: 240px;
+  padding: 0px 30px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 
@@ -78,11 +82,11 @@ export const TitleCard = styled.h2`
 export const TechContainer = styled.div`
   border-radius: 16px;
   background: #fff;
-  padding: 24px 0px;
+  padding: 30px 0px;
   width: 100%;
-  overflow: hidden;
 
   .slick-slide img {
-    margin: 8px 0px;
+    width: 160px;
+    margin: auto;
   }
 `;
