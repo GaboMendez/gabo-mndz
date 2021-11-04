@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ScrollWrapper = styled.div`
   position: fixed;
-  right: 10px;
+  right: 2px;
   bottom: 20px;
   font-size: 3.5rem;
   z-index: 1;

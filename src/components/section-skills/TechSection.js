@@ -20,8 +20,6 @@ const TechSection = () => {
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 1,
-    className: 'center',
-    centerPadding: '60px',
     responsive: [
       {
         breakpoint: 1500,
