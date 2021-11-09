@@ -91,5 +91,20 @@ export const TechContainer = styled.div`
   .slick-slide img {
     width: 160px;
     margin: auto;
+    opacity: 0.8;
+    transition: opacity 150ms linear 100ms;
+    transform: 150ms ease-in-out 100ms;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.03);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        opacity: 1;
+
+        //transform: translateY(-5px);
+        //color: #ddbc95;
+      }
+    }
   }
 `;
