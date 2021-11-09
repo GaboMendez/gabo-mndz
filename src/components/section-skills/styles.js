@@ -89,8 +89,9 @@ export const TechContainer = styled.div`
   width: 100%;
 
   .slick-slide img {
-    width: 160px;
-    margin: auto;
+    width: 160px !important;
+    margin: auto !important;
+    display: block !important;
     opacity: 0.8;
     transition: opacity 150ms linear 100ms;
     transform: 150ms ease-in-out 100ms;

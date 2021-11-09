@@ -1,3 +1,5 @@
+import Fade from '@material-ui/core/Fade';
+import Tooltip from '@material-ui/core/Tooltip';
 import React from 'react';
 import Slider from 'react-slick';
 import { TechContainer } from './styles';
@@ -82,14 +84,27 @@ const TechSection = () => {
           cssEase={'linear'}
           autoplaySpeed={3000}
           autoplay
-          focusOnSelect
           {...settings}
         >
           {technologies.map((item) => {
             return (
-              <div>
+              <Tooltip
+                TransitionComponent={Fade}
+                TransitionProps={{ timeout: 200 }}
+                title={item.name}
+                PopperProps={{
+                  popperOptions: {
+                    modifiers: {
+                      offset: {
+                        enabled: true,
+                        offset: '0px, -16px',
+                      },
+                    },
+                  },
+                }}
+              >
                 <img src={item.img} />
-              </div>
+              </Tooltip>
             );
           })}
         </Slider>

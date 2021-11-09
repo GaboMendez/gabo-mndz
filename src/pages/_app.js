@@ -43,6 +43,10 @@ function MyApp({ Component, pageProps }) {
           rel='stylesheet'
           href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'
         />
+        <link
+          rel='stylesheet'
+          href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'
+        />
       </Head>
       <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
       <Navbar handleToggle={handleToggle} />
