@@ -5,14 +5,60 @@ import Slider from 'react-slick';
 import { TechContainer } from './styles';
 
 const technologies = [
-  { id: 1, name: 'JAVASCRIPT', img: require('../../public/js.png') },
-  { id: 2, name: 'REACT', img: require('../../public/js.png') },
-  { id: 3, name: 'TYPESCRIPT', img: require('../../public/js.png') },
-  { id: 4, name: 'ANT DESIGN', img: require('../../public/js.png') },
-  { id: 5, name: 'XAMARIN', img: require('../../public/js.png') },
-  { id: 6, name: 'KOTLIN', img: require('../../public/js.png') },
-  { id: 7, name: 'ORACLE', img: require('../../public/js.png') },
-  { id: 8, name: 'JAVA', img: require('../../public/js.png') },
+  {
+    id: 1,
+    name: 'JAVASCRIPT',
+    img: require('../../public/technologies/js.png'),
+    link: 'https://www.programiz.com/javascript',
+  },
+  {
+    id: 2,
+    name: 'REACT',
+    img: require('../../public/technologies/react.png'),
+    link: 'https://reactjs.org/docs/getting-started.html',
+  },
+  {
+    id: 3,
+    name: 'TYPESCRIPT',
+    img: require('../../public/technologies/ts.png'),
+    link: 'https://www.typescriptlang.org/docs/',
+  },
+  {
+    id: 4,
+    name: 'XAMARIN',
+    img: require('../../public/technologies/xamarin.png'),
+    link: 'https://docs.microsoft.com/en-us/xamarin/',
+  },
+  {
+    id: 5,
+    name: 'JENKINS',
+    img: require('../../public/technologies/jenkins.png'),
+    link: 'https://www.jenkins.io/doc/',
+  },
+  {
+    id: 6,
+    name: 'OPENSHIFT',
+    img: require('../../public/technologies/openshift.png'),
+    link: 'https://docs.openshift.com/container-platform/4.7/welcome/index.html',
+  },
+  {
+    id: 7,
+    name: 'SPRING FRAMEWORKS',
+    img: require('../../public/technologies/spring.png'),
+    link: 'https://spring.io/projects',
+  },
+  {
+    id: 8,
+    name: 'JAVA',
+    img: require('../../public/technologies/java.png'),
+    link: 'https://www.tutorialspoint.com/java/index.htm',
+  },
+  {
+    id: 9,
+    name: 'ORACLE',
+    img: require('../../public/technologies/oracle.png'),
+    link: 'https://www.techonthenet.com/oracle/index.php',
+  },
 ];
 
 const TechSection = () => {
@@ -86,9 +132,10 @@ const TechSection = () => {
           autoplay
           {...settings}
         >
-          {technologies.map((item) => {
+          {technologies.map((item, idx) => {
             return (
               <Tooltip
+                key={idx}
                 TransitionComponent={Fade}
                 TransitionProps={{ timeout: 200 }}
                 title={item.name}
@@ -103,7 +150,11 @@ const TechSection = () => {
                   },
                 }}
               >
-                <img src={item.img} />
+                <img
+                  key={idx}
+                  src={item.img}
+                  onClick={() => window.open(item.link, '_blank')}
+                />
               </Tooltip>
             );
           })}

@@ -27,3 +27,7 @@ a {
 .MuiTooltip-tooltip {
   font-size: medium !important;
 }
+
+.slick-track {
+  display: flex !important;
+}

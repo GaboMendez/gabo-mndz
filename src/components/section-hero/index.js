@@ -27,7 +27,7 @@ const HeroSection = () => {
 
       <CircleAvatar />
       <HeroContent>
-        <div style={{ padding: '60px 0 0 0' }}>
+        <div style={{ padding: '80px 0 0 0' }}>
           <SocialMedia style={{ paddingTop: '50px', paddingBottom: '20px' }} />
           <Title>Gabriel Mendez</Title>
           <Description>Software Engineer</Description>

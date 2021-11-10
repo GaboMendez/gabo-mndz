@@ -88,23 +88,29 @@ export const TechContainer = styled.div`
   padding: 30px 0px;
   width: 100%;
 
-  .slick-slide img {
-    width: 160px !important;
-    margin: auto !important;
-    display: block !important;
-    opacity: 0.8;
-    transition: opacity 150ms linear 100ms;
-    transform: 150ms ease-in-out 100ms;
+  // slick images centered and same dimensions
+  .slick-slide {
+    height: inherit !important;
 
-    @media (hover: hover) {
-      &:hover {
-        transform: scale(1.03);
-        transition: all 0.2s ease-in-out;
-        cursor: pointer;
-        opacity: 1;
+    div {
+      height: 100%;
+      display: flex;
+    }
 
-        //transform: translateY(-5px);
-        //color: #ddbc95;
+    img {
+      width: 180px !important;
+      margin: auto !important;
+      opacity: 0.8;
+      transition: opacity 150ms linear 100ms;
+      transform: 150ms ease-in-out 100ms;
+
+      @media (hover: hover) {
+        &:hover {
+          transform: scale(1.03);
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+          opacity: 1;
+        }
       }
     }
   }
