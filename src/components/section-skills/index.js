@@ -14,7 +14,7 @@ const SkillsSection = () => {
   return (
     <>
       <SkillsContainer id='skills'>
-        <Title>SKILLS</Title>
+        <Title>I'VE BEEN PRODUCTIVE WITH</Title>
         <ContentWrapper>
           <SkillsCard className='shadow-bg'>
             <IconCard src={Icon1} />

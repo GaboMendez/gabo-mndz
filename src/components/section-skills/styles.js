@@ -25,10 +25,33 @@ export const SkillsContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 2.5rem;
   color: #fff;
+  font-size: 2.4rem;
   margin-bottom: 24px;
-  text-align: center;
+  align-self: center;
+  position: relative;
+  width: fit-content;
+
+  ::before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    background-color: #353535;
+    height: 4px;
+    bottom: 0;
+  }
+
+  ::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 40%;
+    background-color: #009ddc;
+    height: 4px;
+    bottom: 0;
+  }
+
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
@@ -83,7 +106,7 @@ export const TitleCard = styled.h2`
 `;
 
 export const TechContainer = styled.div`
-  border-radius: 16px;
+  border-radius: 12px;
   background: #fff;
   padding: 30px 0px;
   width: 100%;

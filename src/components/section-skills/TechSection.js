@@ -2,7 +2,7 @@ import Fade from '@material-ui/core/Fade';
 import Tooltip from '@material-ui/core/Tooltip';
 import React from 'react';
 import Slider from 'react-slick';
-import { TechContainer } from './styles';
+import { TechContainer, Title } from './styles';
 
 const technologies = [
   {
@@ -43,7 +43,7 @@ const technologies = [
   },
   {
     id: 7,
-    name: 'SPRING FRAMEWORKS',
+    name: 'SPRING',
     img: require('../../public/technologies/spring.png'),
     link: 'https://spring.io/projects',
   },
@@ -123,7 +123,7 @@ const TechSection = () => {
 
   return (
     <>
-      <h1 style={{ color: 'white', alignSelf: 'center' }}>TECHNOLOGIES</h1>
+      <Title style={{ alignSelf: 'flex-start' }}>TECHNOLOGIES I WORK ON</Title>
       <TechContainer className='shadow-bg'>
         <Slider
           swipeToSlide={true}
