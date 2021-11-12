@@ -1,6 +1,7 @@
 import Fade from '@material-ui/core/Fade';
 import Tooltip from '@material-ui/core/Tooltip';
-import React from 'react';
+import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Slider from 'react-slick';
 import { TechContainer, Title } from './styles';
 
@@ -62,6 +63,15 @@ const technologies = [
 ];
 
 const TechSection = () => {
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1224px)',
+  });
+  const [clickable, setClickable] = useState(true);
+
+  const onSliderChange = () => {
+    setClickable(true);
+  };
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -128,6 +138,8 @@ const TechSection = () => {
         <Slider
           swipeToSlide={true}
           cssEase={'linear'}
+          afterChange={onSliderChange}
+          beforeChange={() => setClickable(false)}
           autoplaySpeed={3000}
           autoplay
           {...settings}
@@ -138,6 +150,7 @@ const TechSection = () => {
                 key={idx}
                 TransitionComponent={Fade}
                 TransitionProps={{ timeout: 200 }}
+                enterTouchDelay={50}
                 title={item.name}
                 PopperProps={{
                   popperOptions: {
@@ -153,7 +166,9 @@ const TechSection = () => {
                 <img
                   key={idx}
                   src={item.img}
-                  onClick={() => window.open(item.link, '_blank')}
+                  onClick={() =>
+                    isDesktop && clickable && window.open(item.link, '_blank')
+                  }
                 />
               </Tooltip>
             );

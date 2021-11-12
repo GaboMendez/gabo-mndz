@@ -127,13 +127,11 @@ export const TechContainer = styled.div`
       transition: opacity 150ms linear 100ms;
       transform: 150ms ease-in-out 100ms;
 
-      @media (hover: hover) {
-        &:hover {
-          transform: scale(1.03);
-          transition: all 0.2s ease-in-out;
-          cursor: pointer;
-          opacity: 1;
-        }
+      &:hover {
+        transform: scale(1.03);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        opacity: 1;
       }
     }
   }
