@@ -71,7 +71,7 @@ const TechSection = () => {
   const onSliderChange = () => {
     setClickable(true);
   };
-  
+
   const settings = {
     dots: true,
     infinite: true,
@@ -133,7 +133,9 @@ const TechSection = () => {
 
   return (
     <>
-      <Title style={{ alignSelf: 'flex-start' }}>TECHNOLOGIES I WORK ON</Title>
+      <Title style={{ alignSelf: 'flex-start' }}>
+        TECHNOLOGIES I'VE WORKED ON
+      </Title>
       <TechContainer className='shadow-bg'>
         <Slider
           swipeToSlide={true}
