@@ -83,7 +83,7 @@ export const SkillsCard = styled.div`
   background: #fff;
   display: flex;
   height: 100%;
-  row-gap: 4px;
+  row-gap: 6px;
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
@@ -93,11 +93,9 @@ export const SkillsCard = styled.div`
   padding: 10px 20px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
-
   &:hover {
     transform: scale(1.02);
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
   }
 `;
 

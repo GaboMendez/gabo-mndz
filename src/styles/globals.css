@@ -24,10 +24,30 @@ a {
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1), 0px 1px 6px rgba(0, 0, 0, 0.2) !important;
 }
 
+/* Slider */
 .MuiTooltip-tooltip {
   font-size: medium !important;
 }
 
 .slick-track {
   display: flex !important;
+}
+
+/* Card Skill */
+.skill-cover {
+  display: contents;
+  transform: all translate(0);
+}
+
+.skill-desc {
+  display: none;
+  transform: all scale(1);
+}
+
+.skill-wrapper:hover .skill-desc {
+  display: block;
+}
+
+.skill-wrapper:hover .skill-cover {
+  display: none !important;
 }
