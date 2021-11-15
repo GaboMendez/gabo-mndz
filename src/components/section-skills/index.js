@@ -17,24 +17,24 @@ import TechSection from './TechSection';
 const skills = [
   {
     title: 'Front End Development',
-    icon: <FaDesktop size={80} color={'#010606'} />,
+    icon: <FaDesktop size={60} color={'#010606'} />,
     description:
-      'React, Next, HTML5, CSS / SASS, JavaScript / ES6, TypeScript, SPA',
+      'React, Next, JavaScript / ES6, TypeScript, Styled Components / CSS / SASS, HTML5, SPA',
   },
   {
     title: 'Mobile Development',
-    icon: <FaMobileAlt size={80} color={'#010606'} />,
+    icon: <FaMobileAlt size={60} color={'#010606'} />,
     description: 'Xamarin (MVVM, Prism), Kotlin (MVVM, MVP), Android SDK',
   },
   {
     title: 'Back End Development',
-    icon: <FaDatabase size={80} color={'#010606'} />,
+    icon: <FaDatabase size={60} color={'#010606'} />,
     description:
-      'Oracle / SQL Server, Java, Spring Boot-Cloud, C#, Rest API, OOP / Design Patterns',
+      'Oracle / SQL Server, Spring Boot-Cloud, Java, C#, Rest API, OOP / Design Patterns',
   },
   {
     title: 'DevOps',
-    icon: <FaCodeBranch size={90} color={'#010606'} />,
+    icon: <FaCodeBranch size={70} color={'#010606'} />,
     description: 'Git / Github / Gitlab, Jenkins, CI / CD, Openshift, Docker',
   },
 ];
@@ -52,7 +52,7 @@ const SkillsSection = () => {
                   {item.icon}
                   <TitleCard>{item.title}</TitleCard>
                 </div>
-                <div className='skill-desc'>
+                <div className='skill-desc wow zoomIn animated'>
                   <h4>{item.description}</h4>
                 </div>
               </SkillsCard>

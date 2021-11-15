@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }) {
         />
         <link
           rel='stylesheet'
-          href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'
+          href='https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css'
         />
       </Head>
       <Sidebar isOpen={isOpen} handleToggle={handleToggle} />

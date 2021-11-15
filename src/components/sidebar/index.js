@@ -22,7 +22,7 @@ const Sidebar = ({ isOpen, handleToggle }) => {
         <Icon onClick={handleToggle}>
           <CloseIcon />
         </Icon>
-        <SidebarWrapper>
+        <SidebarWrapper isOpen={isOpen} >
           <SidebarMenu>
             {items.map((item) => (
               <SidebarItem

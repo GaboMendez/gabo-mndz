@@ -38,6 +38,7 @@ export const Icon = styled.div`
 `;
 
 export const SidebarWrapper = styled.div`
+  display: ${({ isOpen }) => (isOpen ? 'unset' : 'none')};
   color: #fff;
 `;
 
@@ -45,7 +46,8 @@ export const SidebarMenu = styled.ul`
   padding: 0px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 80px);
+  grid-template-rows: repeat(4, auto);
+  row-gap: 20px;
   text-align: center;
 
   @media screen and (max-width: 480px) {
