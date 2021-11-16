@@ -1,15 +1,20 @@
 import styled from 'styled-components';
 
 export const SkillsContainer = styled.div`
-  height: 800px;
+  height: 760px;
   padding: 0px 74px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background: #010606;
 
+  @media screen and (max-width: 1150px) {
+    height: 1000px;
+    padding: 0px 68px;
+  }
+
   @media screen and (max-width: 1068px) {
-    height: 950px;
+    height: 920px;
     padding: 0px 64px;
   }
 
@@ -19,11 +24,11 @@ export const SkillsContainer = styled.div`
   }
 
   @media screen and (max-width: 568px) {
-    height: 1050px;
+    height: 1120px;
   }
-  
+
   @media screen and (max-width: 480px) {
-    height: 1500px;
+    height: 1220px;
     padding: 0px 44px;
   }
 `;
@@ -60,6 +65,10 @@ export const Title = styled.h1`
     font-size: 2.1rem;
   }
 
+  @media screen and (max-width: 768px) {
+    font-size: 1.9rem;
+  }
+
   @media screen and (max-width: 568px) {
     font-size: 1.7rem;
   }
@@ -82,7 +91,7 @@ export const ContentWrapper = styled.div`
     align-self: center;
   }
 
-  @media screen and (max-width: 1068px) {
+  @media screen and (max-width: 1150px) {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -97,14 +106,15 @@ export const SkillsCard = styled.div`
   background: #fff;
   display: flex;
   height: 100%;
-  row-gap: 6px;
+  min-height: 160px;
+  max-height: 240px;
+  min-width: 220px;
+  row-gap: 12px;
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
   border-radius: 10px;
-  max-height: 240px;
-  min-width: 220px;
-  padding: 10px 20px;
+  padding: 16px 20px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 
@@ -113,8 +123,11 @@ export const SkillsCard = styled.div`
     transition: all 0.2s ease-in-out;
   }
 
-  @media screen and (max-width: 1068px) {
+  @media screen and (max-width: 1150px) {
     width: 130px;
+  }
+
+  @media screen and (max-width: 568px) {
   }
 `;
 
@@ -127,7 +140,7 @@ export const IconCard = styled.img`
 export const TitleCard = styled.h2`
   margin: 0;
   color: #010606;
-  font-size: 2rem;
+  font-size: 1.9rem;
   align-self: center;
   position: sticky;
   width: fit-content;
