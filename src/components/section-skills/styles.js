@@ -118,16 +118,31 @@ export const SkillsCard = styled.div`
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 
+  .skill-cover {
+    display: contents;
+    transform: all translate(0);
+  }
+
+  .skill-desc {
+    display: none;
+    transform: all scale(1);
+  }
+
   &:hover {
     transform: scale(1.02);
     transition: all 0.2s ease-in-out;
+
+    .skill-desc {
+      display: block;
+    }
+
+    .skill-cover {
+      display: none !important;
+    }
   }
 
   @media screen and (max-width: 1150px) {
     width: 130px;
-  }
-
-  @media screen and (max-width: 568px) {
   }
 `;
 
@@ -169,7 +184,11 @@ export const TechContainer = styled.div`
   padding: 30px 0px;
   width: 100%;
 
-  // slick images centered and same dimensions
+  // Slick images centered and same dimensions
+  .slick-track {
+    display: flex !important;
+  }
+
   .slick-slide {
     height: inherit !important;
 

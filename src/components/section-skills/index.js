@@ -47,7 +47,7 @@ const SkillsSection = () => {
         <ContentWrapper>
           {skills.map((item, idx) => {
             return (
-              <SkillsCard key={idx} className='skill-wrapper'>
+              <SkillsCard key={idx}>
                 <div className='skill-cover'>
                   {item.icon}
                   <TitleCard>{item.title}</TitleCard>
