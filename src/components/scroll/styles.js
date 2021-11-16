@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ScrollWrapper = styled.div`
   position: fixed;
   right: 2px;
-  bottom: 20px;
+  bottom: 2px;
   font-size: 3.5rem;
   z-index: 1;
   cursor: pointer;
@@ -20,8 +20,11 @@ export const ScrollWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 1068px) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
     font-size: 2rem;
-    bottom: 0px;
   }
 `;

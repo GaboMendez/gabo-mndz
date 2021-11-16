@@ -19,7 +19,7 @@ const skills = [
     title: 'Front End Development',
     icon: <FaDesktop size={60} color={'#010606'} />,
     description:
-      'React, Next, JavaScript / ES6, TypeScript, Styled Components / CSS / SASS, HTML5, SPA',
+      'React, Next, TypeScript, JavaScript / ES6, SPA, Styled Components / CSS / SASS, HTML5',
   },
   {
     title: 'Mobile Development',

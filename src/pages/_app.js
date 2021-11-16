@@ -13,6 +13,11 @@ function MyApp({ Component, pageProps }) {
     window.history.scrollRestoration = 'manual';
   }, []);
 
+  useEffect(() => {
+    // Hide scroll when is Sidebar Opened
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+  }, [isOpen]);
+
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
