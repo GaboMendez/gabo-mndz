@@ -2,6 +2,7 @@ import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
+  z-index: 1600;
   background: #000;
   height: 80px;
   margin-top: -80px;
@@ -12,7 +13,6 @@ export const Nav = styled.nav`
   font-size: 1rem;
   position: sticky;
   top: 0;
-  z-index: 10;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;

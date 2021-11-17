@@ -1,7 +1,6 @@
 import React from 'react';
 import { aboutObj } from '../section-info/data';
 import {
-  Column01,
   Heading,
   SubTitle,
   TextWrapper,
@@ -18,13 +17,11 @@ const AboutSection = () => {
     <>
       <AboutWrapper id='about'>
         <ColumnContent>
-          <Column01>
-            <TextWrapper>
-              <TopLine> {topLine} </TopLine>
-              <Heading lightText={lightText}> {headLine} </Heading>
-              <SubTitle darkText={darkText}> {description} </SubTitle>
-            </TextWrapper>
-          </Column01>
+          <TextWrapper>
+            <TopLine> {topLine} </TopLine>
+            <Heading lightText={lightText}> {headLine} </Heading>
+            <SubTitle darkText={darkText}> {description} </SubTitle>
+          </TextWrapper>
         </ColumnContent>
 
         <ColumnContent>
