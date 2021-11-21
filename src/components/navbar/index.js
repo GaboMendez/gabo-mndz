@@ -26,7 +26,7 @@ const Navbar = ({ handleToggle }) => {
       <Nav>
         <NavbarContainer>
           <NavLogo onClick={scrollToTop}>
-            <img src={require('../../public/logo.jpg')} width={80} />
+            <img src={'/logo.jpg'} width={80} />
           </NavLogo>
           <MobileIcon onClick={handleToggle}>
             <FaBars />

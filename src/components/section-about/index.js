@@ -6,6 +6,7 @@ import {
   TextWrapper,
   TopLine,
 } from '../section-info/styles';
+import JobSection from './JobSection';
 import { AboutWrapper, ColumnContent } from './styles';
 
 const AboutSection = () => {
@@ -25,7 +26,7 @@ const AboutSection = () => {
         </ColumnContent>
 
         <ColumnContent>
-          <h2>Hey!!</h2>
+          <JobSection />
         </ColumnContent>
       </AboutWrapper>
     </>

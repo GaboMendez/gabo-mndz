@@ -16,13 +16,7 @@ const HeroSection = () => {
   return (
     <HeroContainer id='home'>
       <HeroBg>
-        <VideoBg
-          autoPlay
-          loop
-          muted
-          src={require('../../public/video.mp4')}
-          type='video/mp4'
-        />
+        <VideoBg autoPlay loop muted src={'/video.mp4'} type='video/mp4' />
       </HeroBg>
 
       <CircleAvatar />

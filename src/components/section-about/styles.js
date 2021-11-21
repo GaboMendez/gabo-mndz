@@ -13,6 +13,10 @@ export const AboutWrapper = styled.div`
 export const ColumnContent = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 1;
-  padding: 40px 20px;
+  padding: 20px;
+
+  @media screen and (min-width: 780px) {
+    flex: 1;
+    padding: 40px 20px;
+  }
 `;
