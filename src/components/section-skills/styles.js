@@ -155,7 +155,7 @@ export const IconCard = styled.img`
 export const TitleCard = styled.h2`
   margin: 0;
   color: #010606;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   align-self: center;
   position: sticky;
   width: fit-content;
