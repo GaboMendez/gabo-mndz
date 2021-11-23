@@ -25,9 +25,8 @@ const JobSection = () => {
               <svg
                 stroke='currentColor'
                 fill='currentColor'
-                stroke-width='0'
                 viewBox='0 0 448 512'
-                class='job-icon'
+                className='job-icon'
                 height='1em'
                 width='1em'
                 xmlns='http://www.w3.org/2000/svg'
@@ -44,9 +43,8 @@ const JobSection = () => {
               <svg
                 stroke='currentColor'
                 fill='currentColor'
-                stroke-width='0'
                 viewBox='0 0 448 512'
-                class='job-icon'
+                className='job-icon'
                 height='1em'
                 width='1em'
                 xmlns='http://www.w3.org/2000/svg'
@@ -63,9 +61,8 @@ const JobSection = () => {
               <svg
                 stroke='currentColor'
                 fill='currentColor'
-                stroke-width='0'
                 viewBox='0 0 448 512'
-                class='job-icon'
+                className='job-icon'
                 height='1em'
                 width='1em'
                 xmlns='http://www.w3.org/2000/svg'
