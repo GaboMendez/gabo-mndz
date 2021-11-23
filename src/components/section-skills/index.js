@@ -48,8 +48,8 @@ const SkillsSection = () => {
         <ContentWrapper>
           {skills.map((item, idx) => {
             return (
-              <Tilt key={idx} tiltReverse={true}>
-                <SkillsCard className='inner-element' key={idx}>
+              <Tilt key={idx} tiltReverse={true} transitionSpeed={10000}>
+                <SkillsCard key={idx}>
                   <div className='skill-cover'>
                     {item.icon}
                     <TitleCard>{item.title}</TitleCard>
