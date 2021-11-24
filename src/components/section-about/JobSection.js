@@ -75,6 +75,7 @@ const JobSection = () => {
               </p>
             </div>
           </JobInfo>
+
           <JobTabs>
             <button className='job-btn active-btn'>Tommy</button>
             <button className='job-btn'>BigDrop</button>
