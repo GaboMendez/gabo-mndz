@@ -1,5 +1,5 @@
 import React from 'react';
-import { JobContainer, Title } from './styles';
+import { JobContainer, JobInfo, JobsWrapper, JobTabs, Title } from './styles';
 /** Classname lists
  * section jobs
  * jobs-center
@@ -16,8 +16,8 @@ const JobSection = () => {
     <>
       <Title alignRight>WORK EXPERIENCE</Title>
       <JobContainer>
-        <div className='jobs-center'>
-          <article className='job-info'>
+        <JobsWrapper>
+          <JobInfo>
             <h3>Full Stack Web Developer</h3>
             <h4>Tommy</h4>
             <p className='job-date'>December 2015 - Present</p>
@@ -71,18 +71,16 @@ const JobSection = () => {
               </svg>
               <p>
                 Butcher drinking vinegar franzen authentic messenger bag copper
-                mug food truck taxidermy. Mumblecore lomo echo park readymade
-                iPhone migas single-origin coffee franzen cloud bread tilde
-                vegan flexitarian.
+                mug food truck taxidermy.
               </p>
             </div>
-          </article>
-          <div className='btn-container'>
+          </JobInfo>
+          <JobTabs>
             <button className='job-btn active-btn'>Tommy</button>
             <button className='job-btn'>BigDrop</button>
             <button className='job-btn'>cuker</button>
-          </div>
-        </div>
+          </JobTabs>
+        </JobsWrapper>
       </JobContainer>
     </>
   );

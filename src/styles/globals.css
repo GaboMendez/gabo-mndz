@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  text-align: justify;
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Hammersmith One', sans-serif;
