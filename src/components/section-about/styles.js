@@ -4,14 +4,19 @@ export const Title = styled.h1`
   color: #000;
   font-size: 2.4rem;
   margin-bottom: 24px;
-  align-self: ${(props) => (props.alignRight ? 'flex-end' : ' flex-start')};
+  align-self: ${(props) =>
+    props.alignRight
+      ? 'flex-end'
+      : props.alignCenter
+      ? 'center'
+      : ' flex-start'};
   position: relative;
   width: fit-content;
 
   ::before {
     display: block;
     position: absolute;
-    content: '';
+    content: ${(props) => (props.alignCenter ? 'unset' : "''")};
     width: 100%;
     background-color: ${(props) => (props.alignRight ? '#009ddc' : '#fff')};
     height: 4px;
@@ -20,12 +25,14 @@ export const Title = styled.h1`
 
   ::after {
     display: block;
-    position: absolute;
+    position: ${(props) => !props.alignCenter && 'absolute'};
     content: '';
     width: ${(props) => (props.alignRight ? '40%' : ' 60%')};
     background-color: ${(props) => (props.alignRight ? '#fff' : '#009ddc')};
     height: 4px;
     bottom: 0;
+    margin: ${(props) => props.alignCenter && '0 auto'};
+    margin-top: ${(props) => props.alignCenter && '-4px'};
   }
 
   @media screen and (max-width: 1068px) {
@@ -51,7 +58,7 @@ export const AboutWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0px 20px;
+  padding: 0px 40px 0px 10px;
   gap: 20px;
   height: 860px;
 `;
@@ -63,7 +70,7 @@ export const ColumnContent = styled.div`
 
   @media screen and (min-width: 780px) {
     flex: 1;
-    padding: 40px 20px;
+    padding: 20px;
   }
 `;
 
