@@ -133,9 +133,7 @@ const TechSection = () => {
 
   return (
     <>
-      <Title style={{ alignSelf: 'flex-start' }}>
-        TECHNOLOGIES I'VE WORKED ON
-      </Title>
+      <Title>TECHNOLOGIES I'VE WORKED ON</Title>
       <TechContainer className='shadow-bg'>
         <Slider
           swipeToSlide={true}

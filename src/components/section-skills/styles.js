@@ -37,7 +37,7 @@ export const Title = styled.h1`
   color: #fff;
   font-size: 2.4rem;
   margin-bottom: 24px;
-  align-self: center;
+  align-self: ${(props) => (props.alignCenter ? 'center' : 'flex-start')};
   position: relative;
   width: fit-content;
 
@@ -55,10 +55,13 @@ export const Title = styled.h1`
     display: block;
     position: absolute;
     content: '';
-    width: 40%;
+    width: ${(props) => (props.alignCenter ? '55%' : '40%')};
     background-color: #009ddc;
     height: 4px;
     bottom: 0;
+    left: ${(props) => props.alignCenter && 0};
+    right: ${(props) => props.alignCenter && 0};
+    margin: ${(props) => props.alignCenter && '0px auto'};
   }
 
   @media screen and (max-width: 1068px) {

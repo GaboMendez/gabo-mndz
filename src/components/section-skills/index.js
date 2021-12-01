@@ -44,7 +44,7 @@ const SkillsSection = () => {
   return (
     <>
       <SkillsContainer id='skills'>
-        <Title>I'VE BEEN PRODUCTIVE WITH</Title>
+        <Title alignCenter>I'VE BEEN PRODUCTIVE WITH</Title>
         <ContentWrapper>
           {skills.map((item, idx) => {
             return (
