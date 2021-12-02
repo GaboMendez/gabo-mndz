@@ -135,7 +135,7 @@ export const JobContainer = styled.div`
     text-transform: capitalize;
     font-size: 1.25rem;
     letter-spacing: 0.2rem;
-    margin: 0 0.5rem;
+    margin: 0.3rem;
     transition: all 0.3s linear;
     cursor: pointer;
     padding: 0.25rem 0;

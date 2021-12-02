@@ -1,5 +1,8 @@
 import React from 'react';
+import { useState } from 'react';
 import { JobContainer, JobInfo, JobsWrapper, JobTabs, Title } from './styles';
+import { FaAngleDoubleRight } from 'react-icons/fa';
+
 /** Classname lists
  * section jobs
  * jobs-center
@@ -11,58 +14,74 @@ import { JobContainer, JobInfo, JobsWrapper, JobTabs, Title } from './styles';
  * job-date
  * job-icon
  */
+const jobs = [
+  {
+    company: 'Xpert Code',
+    position: 'Software Developer',
+    date: 'August 2020 - Present',
+    descriptions: [
+      'React, Next, TypeScript, JavaScript / ES6, SPA, Styled Components / CSS / SASS, HTML5',
+      'adasdsad',
+      'adasdasdsa',
+    ],
+  },
+  {
+    company: 'Caribe Media',
+    position: 'Mobile Developer',
+    date: 'February 2020 - August 2020',
+    descriptions: [
+      'Xamarin (MVVM, Prism), Kotlin (MVVM, MVP), Android SDK',
+      'adasdsad',
+      'adasdasdsa',
+    ],
+  },
+  {
+    company: 'Planeta Azul',
+    position: 'Mobile Developer',
+    date: 'October 2019 - February 2020',
+    descriptions: [
+      'Oracle / SQL Server, Spring Boot-Cloud, Java, C#, Rest API, OOP / Design Patterns',
+      'adasdsad',
+      'adasdasdsa',
+    ],
+  },
+];
+
 const JobSection = () => {
+  const [tabIndex, setTabIndex] = useState(0);
+  const { company, position, date, descriptions } = jobs[tabIndex];
+
   return (
     <>
       <Title alignRight>WORK EXPERIENCE</Title>
       <JobContainer>
         <JobsWrapper>
           <JobInfo>
-            <h3>Full Stack Web Developer</h3>
-            <h4>Tommy</h4>
-            <p className='job-date'>December 2015 - Present</p>
-            <div className='job-desc'>
-              <svg
-                stroke='currentColor'
-                fill='currentColor'
-                viewBox='0 0 448 512'
-                className='job-icon'
-                height='1em'
-                width='1em'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z'></path>
-              </svg>
-              <p>
-                Tote bag sartorial mlkshk air plant vinyl banjo lumbersexual
-                poke leggings offal cold-pressed brunch neutra. Hammock photo
-                booth live-edge disrupt.
-              </p>
-            </div>
-            <div className='job-desc'>
-              <svg
-                stroke='currentColor'
-                fill='currentColor'
-                viewBox='0 0 448 512'
-                className='job-icon'
-                height='1em'
-                width='1em'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z'></path>
-              </svg>
-              <p>
-                Post-ironic selvage chambray sartorial freegan meditation.
-                Chambray chartreuse kombucha meditation, man bun four dollar
-                toast street art cloud bread live-edge heirloom.
-              </p>
-            </div>
+            <h3>{position}</h3>
+            <h4>{company}</h4>
+            <p className='job-date'>{date}</p>
+            {descriptions.map((description, idx) => {
+              return (
+                <div key={idx} className='job-desc'>
+                  <FaAngleDoubleRight className='job-icon' />
+                  <p>{description}</p>
+                </div>
+              );
+            })}
           </JobInfo>
 
           <JobTabs>
-            <button className='job-btn active-btn'>Tommy</button>
-            <button className='job-btn'>BigDrop</button>
-            <button className='job-btn'>cuker</button>
+            {jobs.map((item, idx) => {
+              return (
+                <button
+                  key={idx}
+                  className={`job-btn ${idx === tabIndex && 'active-btn'}`}
+                  onClick={() => setTabIndex(idx)}
+                >
+                  {item.company}
+                </button>
+              );
+            })}
           </JobTabs>
         </JobsWrapper>
       </JobContainer>
