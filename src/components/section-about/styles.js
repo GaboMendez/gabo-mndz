@@ -58,24 +58,49 @@ export const AboutWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0px 40px 0px 10px;
+  padding: 0px 40px 0px 14px;
   gap: 20px;
   height: 860px;
+
+  @media screen and (max-width: 780px) {
+    height: 1400px;
+    padding-top: 20px;
+
+    ${Title} {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 568px) {
+    height: 1450px;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 1600px;
+  }
 `;
 
 export const ColumnContent = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 0px 0px;
+
+  .css-upmlie-TitleWrapper {
+    overflow: unset;
+    text-align: center;
+  }
+
+  .css-mpnodf-TimelineTitleWrapper.right {
+    justify-content: center;
+  }
 
   @media screen and (min-width: 780px) {
     flex: 1;
-    padding: 20px;
+    padding: 20px 0px;
   }
 `;
 
 export const JobsWrapper = styled.div`
-  //jobs-wrapper
   display: grid;
   grid-template-rows: 50px 1fr;
   grid-template-columns: auto;
@@ -84,19 +109,19 @@ export const JobsWrapper = styled.div`
     'head'
     'body';
 
-  @media screen and (min-width: 1228px) {
+  @media screen and (min-width: 1024px) {
     display: grid;
     grid-template-columns: 1fr 200px;
     grid-template-rows: unset;
-    column-gap: 4rem;
+    column-gap: 2rem;
   }
 `;
 
 export const JobInfo = styled.article`
-  /* min-height: 420px; */
   h3 {
     font-weight: 400;
   }
+
   h4 {
     text-transform: uppercase;
     color: hsl(210, 22%, 49%);
@@ -107,7 +132,7 @@ export const JobInfo = styled.article`
     margin: 0;
   }
 
-  @media screen and (max-width: 1228px) {
+  @media screen and (max-width: 1024px) {
     grid-area: body;
   }
 `;
@@ -116,15 +141,15 @@ export const JobTabs = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  // margin-bottom: 4rem;
-  @media screen and (max-width: 1228px) {
-    grid-area: head;
-  }
 
-  @media screen and (min-width: 1228px) {
+  @media screen and (min-width: 1024px) {
     flex-direction: column;
     justify-content: flex-start;
     justify-content: center;
+  }
+
+  @media screen and (max-width: 1024px) {
+    grid-area: head;
   }
 `;
 
@@ -136,14 +161,19 @@ export const JobContainer = styled.div`
     font-size: 1.25rem;
     letter-spacing: 0.2rem;
     margin: 0.3rem;
+    padding: 0.25rem 0;
     transition: all 0.3s linear;
     cursor: pointer;
-    padding: 0.25rem 0;
     line-height: 1;
 
     &:hover {
       color: #009ddc;
       box-shadow: 0 2px #009ddc;
+    }
+
+    @media screen and (max-width: 1024px) {
+      margin: 0 14px;
+      padding: 0;
     }
   }
 
@@ -163,19 +193,18 @@ export const JobContainer = styled.div`
   .job-desc {
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 2rem;
+    column-gap: 1rem;
     align-items: center;
-    //margin-bottom: 1.25rem;
+
     p {
-      margin-bottom: 0;
       color: hsl(209, 34%, 30%);
     }
   }
 
-  @media screen and (min-width: 1228px) {
+  @media screen and (min-width: 1024px) {
     .job-btn {
       margin-bottom: 1rem;
-      padding-right: 1.5rem;
+      padding-right: 1rem;
       &:hover {
         box-shadow: 2px 0 #009ddc;
       }

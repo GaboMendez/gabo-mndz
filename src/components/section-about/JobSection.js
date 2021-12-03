@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { JobContainer, JobInfo, JobsWrapper, JobTabs, Title } from './styles';
 import { FaAngleDoubleRight } from 'react-icons/fa';
+import { useMediaQuery } from 'react-responsive';
 
 /** Classname lists
  * section jobs
@@ -48,12 +49,15 @@ const jobs = [
 ];
 
 const JobSection = () => {
+  const isMobile = useMediaQuery({
+    query: '(max-width: 780px)',
+  });
   const [tabIndex, setTabIndex] = useState(0);
   const { company, position, date, descriptions } = jobs[tabIndex];
 
   return (
     <>
-      <Title alignRight>WORK EXPERIENCE</Title>
+      <Title alignRight={!isMobile}>WORK EXPERIENCE</Title>
       <JobContainer>
         <JobsWrapper>
           <JobInfo>

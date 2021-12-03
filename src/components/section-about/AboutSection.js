@@ -9,30 +9,36 @@ import {
 import JobSection from './JobSection';
 import { AboutWrapper, ColumnContent, Title } from './styles';
 import { Chrono } from 'react-chrono';
+import { useMediaQuery } from 'react-responsive';
 
 const items = [
   {
-    title: '25 July 1940',
-    cardTitle: 'The Battle of Britain',
-    cardSubtitle: `RAF Spitfire pilots scramble`,
-    cardDetailedText: `After France’s surrender in June 1940, Churchill told the British people, “Hitler knows that he will have to break us in this island or lose the war”. To mount a successful invasion, the Germans had to gain air superiority. The first phase of the battle began on 10 July with Luftwaffe attacks on shipping in the Channel.
-      The following month, RAF Fighter Command airfields and aircraft factories came under attack.`,
+    title: 'October 2020',
+    cardTitle: 'Software Engineering',
+    cardSubtitle: `Technological Institute of Santo Domingo`,
+    cardDetailedText: `After France’s surrender in June 1940, Churchill told the British people`,
   },
   {
-    title: '7 December 1941',
-    cardTitle: 'Pearl Harbor',
-    cardSubtitle: `The destroyer USS Shaw explodes`,
-    cardDetailedText: `After Japan’s occupation of French Indo-China in July 1941, US President Franklin D Roosevelt, followed by Britain and the Netherlands, ordered the freezing of Japanese assets.`,
+    title: 'July 2016',
+    cardTitle: 'Technical High School',
+    cardSubtitle: `Salesian Technical Institute ITESA`,
+    cardDetailedText: `After Japan’s occupation of French Indo-China in July 1941, US President Franklin D Roosevelt`,
   },
   {
-    title: '7 December 1941',
+    title: 'Certificates',
     cardTitle: 'Pearl Harbor',
-    cardSubtitle: `The destroyer USS Shaw explodes`,
-    cardDetailedText: `After Japan’s occupation of French Indo-China in July 1941, US President Franklin D Roosevelt, followed by Britain and the Netherlands, ordered the freezing of Japanese assets.`,
+    cardDetailedText: `After Japan’s occupation of French Indo-China in July 1941, US President Franklin D Roosevelt, `,
   },
 ];
 
 const AboutSection = () => {
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1224px)',
+  });
+  const isTablet = useMediaQuery({
+    query: '(min-width: 780px)',
+  });
+
   const { topLine, lightText, headLine, darkText, description } = {
     ...aboutObj,
   };
@@ -41,10 +47,14 @@ const AboutSection = () => {
     <>
       <AboutWrapper id='about'>
         <ColumnContent>
-          <Title alignCenter>EDUCATION</Title>
+          <Title alignCenter={isDesktop}>EDUCATION</Title>
           <Chrono
             items={items}
-            mode='VERTICAL_ALTERNATING'
+            hideControls={!isDesktop}
+            mode={isDesktop ? 'VERTICAL_ALTERNATING' : 'VERTICAL'}
+            useReadMore={false}
+            scrollable={false}
+            cardHeight={isTablet ? 200 : 'auto'}
             theme={{
               primary: '#000000',
               secondary: '#b6b6b6',
