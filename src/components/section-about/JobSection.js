@@ -1,20 +1,8 @@
-import React from 'react';
-import { useState } from 'react';
-import { JobContainer, JobInfo, JobsWrapper, JobTabs, Title } from './styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import React, { useState } from 'react';
 import { FaAngleDoubleRight } from 'react-icons/fa';
-import { useMediaQuery } from 'react-responsive';
+import { JobContainer, JobInfo, JobsWrapper, JobTabs, Title } from './styles';
 
-/** Classname lists
- * section jobs
- * jobs-center
- * btn-container
- *
- * job-btn active-btn
- * job-info
- * job-desc
- * job-date
- * job-icon
- */
 const jobs = [
   {
     company: 'Xpert Code',
@@ -49,9 +37,8 @@ const jobs = [
 ];
 
 const JobSection = () => {
-  const isMobile = useMediaQuery({
-    query: '(max-width: 780px)',
-  });
+  const isMobile = useMediaQuery('(max-width:780px)');
+
   const [tabIndex, setTabIndex] = useState(0);
   const { company, position, date, descriptions } = jobs[tabIndex];
 

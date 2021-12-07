@@ -1,15 +1,10 @@
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import React from 'react';
+import { Chrono } from 'react-chrono';
 import { aboutObj } from '../section-info/data';
-import {
-  Heading,
-  SubTitle,
-  TextWrapper,
-  TopLine,
-} from '../section-info/styles';
+import { Heading, SubTitle, TextWrapper } from '../section-info/styles';
 import JobSection from './JobSection';
 import { AboutWrapper, ColumnContent, Title } from './styles';
-import { Chrono } from 'react-chrono';
-import { useMediaQuery } from 'react-responsive';
 
 const items = [
   {
@@ -32,12 +27,8 @@ const items = [
 ];
 
 const AboutSection = () => {
-  const isDesktop = useMediaQuery({
-    query: '(min-width: 1224px)',
-  });
-  const isTablet = useMediaQuery({
-    query: '(min-width: 780px)',
-  });
+  const isDesktop = useMediaQuery('(min-width:1224px)');
+  const isTablet = useMediaQuery('(min-width:780px)');
 
   const { topLine, lightText, headLine, darkText, description } = {
     ...aboutObj,

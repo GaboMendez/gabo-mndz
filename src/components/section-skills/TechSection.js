@@ -1,7 +1,7 @@
 import Fade from '@material-ui/core/Fade';
 import Tooltip from '@material-ui/core/Tooltip';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import React, { useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import Slider from 'react-slick';
 import { TechContainer, Title } from './styles';
 
@@ -63,9 +63,8 @@ const technologies = [
 ];
 
 const TechSection = () => {
-  const isDesktop = useMediaQuery({
-    query: '(min-width: 1224px)',
-  });
+  const isDesktop = useMediaQuery('(min-width:1224px)');
+
   const [clickable, setClickable] = useState(true);
 
   const onSliderChange = () => {
