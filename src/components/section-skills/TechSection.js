@@ -65,7 +65,7 @@ const technologies = [
 const TechSection = () => {
   const isDesktop = useMediaQuery('(min-width:1224px)');
 
-  const [clickable, setClickable] = useState(true);
+  const [clickable, setClickable] = useState(false);
 
   const onSliderChange = () => {
     setClickable(true);

@@ -3,6 +3,7 @@ import HeroSection from '../components/section-hero';
 import InfoSection from '../components/section-info';
 import { aboutObj, discoverObj } from '../components/section-info/data';
 import SkillsSection from '../components/section-skills';
+import ContactSection from '../components/section-contact';
 
 export default function Home() {
   return (
@@ -10,7 +11,8 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
-      <InfoSection {...discoverObj} />
+      <ContactSection />
+      {/* <InfoSection {...discoverObj} /> */}
     </>
   );
 }
