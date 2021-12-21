@@ -16,21 +16,23 @@ export const Title = styled.h1`
   color: #000;
   font-size: 2.4rem;
   margin-bottom: 24px;
-  align-self: center;
+  align-self: flex-start;
   position: relative;
   width: fit-content;
 
   ::before {
     display: block;
     position: absolute;
-    content: unset;
+    content: '';
     width: 100%;
+    background-color: #fff;
     height: 4px;
     bottom: 0;
   }
 
   ::after {
     display: block;
+    position: absolute;
     content: '';
     width: 60%;
     background-color: #009ddc;
@@ -59,7 +61,7 @@ export const Title = styled.h1`
 
 export const CardWrapper = styled.div`
   border-radius: 0.625rem;
-  padding: 2.25rem;
+  padding: 0 2.25rem 2.25rem;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 0 #0000, 0 0 #0000, 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);

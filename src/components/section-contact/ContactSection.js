@@ -37,9 +37,9 @@ const ContactSection = () => {
 
   return (
     <ContactWrapper id='contact'>
-      <Title alignCenter>GET IN TOUCH</Title>
       <CardWrapper>
-        
+        <Title>GET IN TOUCH</Title>
+
         <div
           style={{
             display: 'flex',
