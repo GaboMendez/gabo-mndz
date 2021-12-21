@@ -6,8 +6,8 @@ export const ContactWrapper = styled.div`
   z-index: 1;
   height: 860px;
   width: 100%;
-  padding: 0 40px;
-  justify-content: center;
+  padding: 60px 40px 0;
+  justify-content: flex-start;
   align-items: center;
   background: rgba(68, 68, 68, 0.1);
 `;
@@ -55,4 +55,12 @@ export const Title = styled.h1`
   @media screen and (max-width: 480px) {
     font-size: 1.9rem;
   }
+`;
+
+export const CardWrapper = styled.div`
+  border-radius: 0.625rem;
+  padding: 2.25rem;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 `;
