@@ -1,12 +1,22 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fly_1 = keyframes`
+  0% {
+   transform: translateY(0.1em);
+  }
+ 
+  100% {
+   transform: translateY(-0.1em);
+  }
+ `;
 
 export const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 1;
-  height: 860px;
+  height: 570px;
   width: 100%;
-  padding: 60px 40px 0;
+  padding: 50px 40px 0;
   justify-content: flex-start;
   align-items: center;
   background: rgba(68, 68, 68, 0.1);
@@ -65,4 +75,48 @@ export const CardWrapper = styled.div`
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 0 #0000, 0 0 #0000, 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
+`;
+
+export const SubmitButton = styled.button`
+  font-size: 18px;
+  margin-top: 0.8em;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+  box-shadow: 0 0 40px 40px #0082c3 inset, 0 0 0 0 #0082c3;
+  color: white;
+
+  span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+
+  svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    .svg-wrapper {
+      animation: ${fly_1} 0.6s ease-in-out infinite alternate;
+    }
+
+    span {
+      transform: translateX(5em);
+    }
+
+    svg {
+      transform: translateX(1.2em) rotate(45deg) scale(1.1);
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
 `;
