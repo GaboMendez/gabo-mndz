@@ -9,10 +9,18 @@ import { CardWrapper, ContactWrapper, SubmitButton, Title } from './styles';
  *  + form-control
  *  + submit-btn btn
  */
-const errorMessage = 'Please fill out this field!';
+const errorMessage = 'Please fill out this field';
+
+const isEmptyObject = (obj) => {
+  for (var key in obj) {
+    if (key !== 'lastname' && obj[key] === '') {
+      return true;
+    }
+  }
+  return false;
+};
 
 const ContactSection = () => {
-  const [name, setName] = useState('namee');
   const [error, setError] = useState(false);
   const [user, setUser] = useState({
     name: '',
@@ -33,19 +41,7 @@ const ContactSection = () => {
   const handleMessageChange = (event) =>
     setUser({ ...user, message: event.target.value });
 
-  const isEmptyObject = (obj) => {
-    let ret;
-    for (var key in obj) {
-      if (obj[key] !== null && obj[key] != '') ret = false;
-    }
-    ret = true;
-    return ret;
-  };
-
   const handleSubmit = () => {
-    console.log('xd user', user);
-
-    console.log('isEmptyObject', isEmptyObject(user));
     if (isEmptyObject(user)) {
       setError(true);
     } else {

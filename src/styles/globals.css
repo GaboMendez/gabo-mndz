@@ -35,3 +35,11 @@ p {
 .MuiFormHelperText-contained {
   margin-left: 2px !important;
 }
+
+.MuiFormLabel-root.Mui-focused {
+  color: #009ddc !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #009ddc !important;
+}
