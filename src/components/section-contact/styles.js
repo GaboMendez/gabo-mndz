@@ -70,6 +70,9 @@ export const Title = styled.h1`
 `;
 
 export const CardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
   border-radius: 0.625rem;
   padding: 0 2.25rem 2.25rem;
   background-color: rgba(255, 255, 255, 1);
@@ -79,11 +82,11 @@ export const CardWrapper = styled.div`
 
 export const SubmitButton = styled.button`
   font-size: 18px;
-  margin-top: 0.8em;
   padding: 0.7em 1em;
   padding-left: 0.9em;
   display: flex;
   align-items: center;
+  align-self: flex-start;
   border: none;
   border-radius: 8px;
   transition: all 0.2s;

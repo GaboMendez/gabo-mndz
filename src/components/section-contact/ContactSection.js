@@ -9,8 +9,11 @@ import { CardWrapper, ContactWrapper, SubmitButton, Title } from './styles';
  *  + form-control
  *  + submit-btn btn
  */
+const errorMessage = 'Please fill out this field!';
+
 const ContactSection = () => {
   const [name, setName] = useState('namee');
+  const [error, setError] = useState(false);
   const [user, setUser] = useState({
     name: '',
     lastname: '',
@@ -30,9 +33,24 @@ const ContactSection = () => {
   const handleMessageChange = (event) =>
     setUser({ ...user, message: event.target.value });
 
+  const isEmptyObject = (obj) => {
+    let ret;
+    for (var key in obj) {
+      if (obj[key] !== null && obj[key] != '') ret = false;
+    }
+    ret = true;
+    return ret;
+  };
+
   const handleSubmit = () => {
-    console.log('user', user);
-    setUser({ ...user, lastname: event.target.value });
+    console.log('xd user', user);
+
+    console.log('isEmptyObject', isEmptyObject(user));
+    if (isEmptyObject(user)) {
+      setError(true);
+    } else {
+      console.log('send email');
+    }
   };
 
   return (
@@ -44,7 +62,6 @@ const ContactSection = () => {
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
-            paddingBottom: 8,
             columnGap: 8,
           }}
         >
@@ -54,11 +71,14 @@ const ContactSection = () => {
             variant='outlined'
             value={user.name}
             onChange={handleNameChange}
+            error={error && user.name === ''}
+            helperText={error && user.name === '' ? errorMessage : ' '}
           />
           <TextField
             id='outlined-basic'
             label='Last name'
             variant='outlined'
+            helperText=' '
             value={user.lastname}
             onChange={handleLastnameChange}
           />
@@ -68,19 +88,22 @@ const ContactSection = () => {
           id='outlined-basic'
           label='Email'
           variant='outlined'
-          margin='normal'
           value={user.email}
           onChange={handleEmailChange}
+          error={error && user.email === ''}
+          helperText={error && user.email === '' ? errorMessage : ' '}
           fullWidth
         />
+
         <TextField
           id='outlined-basic'
           label='Message'
           variant='outlined'
-          margin='normal'
-          rows={5}
           value={user.message}
           onChange={handleMessageChange}
+          error={error && user.message === ''}
+          helperText={error && user.message === '' ? errorMessage : ' '}
+          rows={3}
           fullWidth
           multiline
         />

@@ -30,3 +30,8 @@ p {
 .MuiTooltip-tooltip {
   font-size: medium !important;
 }
+
+/* TextField */
+.MuiFormHelperText-contained {
+  margin-left: 2px !important;
+}
