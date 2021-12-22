@@ -156,7 +156,7 @@ const TechSection = () => {
                     modifiers: {
                       offset: {
                         enabled: true,
-                        offset: '0px, -16px',
+                        offset: '0, -16px',
                       },
                     },
                   },

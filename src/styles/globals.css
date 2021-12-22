@@ -21,11 +21,9 @@ p {
 }
 
 .shadow-bg {
-  -webkit-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1),
-    0px 1px 6px rgba(0, 0, 0, 0.2) !important;
-  -moz-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1),
-    0px 1px 6px rgba(0, 0, 0, 0.2) !important;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1), 0px 1px 6px rgba(0, 0, 0, 0.2) !important;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1), 0 1px 6px rgba(0, 0, 0, 0.2) !important;
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1), 0 1px 6px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1), 0 1px 6px rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Tooltip */

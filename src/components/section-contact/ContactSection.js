@@ -78,11 +78,11 @@ const ContactSection = () => {
           label='Message'
           variant='outlined'
           margin='normal'
+          rows={5}
           value={user.message}
           onChange={handleMessageChange}
           fullWidth
           multiline
-          rows={3}
         />
 
         <SubmitButton onClick={handleSubmit}>

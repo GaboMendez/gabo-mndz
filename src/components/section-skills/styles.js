@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SkillsContainer = styled.div`
   height: 760px;
-  padding: 0px 74px;
+  padding: 0 74px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -10,17 +10,17 @@ export const SkillsContainer = styled.div`
 
   @media screen and (max-width: 1150px) {
     height: 1000px;
-    padding: 0px 68px;
+    padding: 0 68px;
   }
 
   @media screen and (max-width: 1068px) {
     height: 920px;
-    padding: 0px 64px;
+    padding: 0 64px;
   }
 
   @media screen and (max-width: 768px) {
     height: 900px;
-    padding: 0px 54px;
+    padding: 0 54px;
   }
 
   @media screen and (max-width: 568px) {
@@ -29,7 +29,7 @@ export const SkillsContainer = styled.div`
 
   @media screen and (max-width: 480px) {
     height: 1220px;
-    padding: 0px 44px;
+    padding: 0 44px;
   }
 `;
 
@@ -61,7 +61,7 @@ export const Title = styled.h1`
     bottom: 0;
     left: ${(props) => props.alignCenter && 0};
     right: ${(props) => props.alignCenter && 0};
-    margin: ${(props) => props.alignCenter && '0px auto'};
+    margin: ${(props) => props.alignCenter && '0 auto'};
   }
 
   @media screen and (max-width: 1068px) {
@@ -184,7 +184,7 @@ export const TitleCard = styled.h2`
 export const TechContainer = styled.div`
   border-radius: 12px;
   background: #fff;
-  padding: 30px 0px;
+  padding: 30px 0;
   width: 100%;
 
   // Slick images centered and same dimensions

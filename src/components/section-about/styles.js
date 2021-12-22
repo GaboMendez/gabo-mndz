@@ -58,7 +58,7 @@ export const AboutWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0px 40px 0px 14px;
+  padding: 0 40px 0 14px;
   gap: 20px;
   height: 860px;
 
@@ -83,7 +83,7 @@ export const AboutWrapper = styled.div`
 export const ColumnContent = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0px 0px;
+  padding: 0;
 
   .css-upmlie-TitleWrapper {
     overflow: unset;
@@ -96,7 +96,6 @@ export const ColumnContent = styled.div`
 
   @media screen and (min-width: 780px) {
     flex: 1;
-    padding: 20px 0px;
   }
 `;
 

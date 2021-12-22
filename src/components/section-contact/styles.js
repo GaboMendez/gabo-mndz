@@ -14,10 +14,10 @@ export const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 1;
-  height: 570px;
+  height: 720px;
   width: 100%;
-  padding: 50px 40px 0;
-  justify-content: flex-start;
+  padding: 0 40px;
+  justify-content: center;
   align-items: center;
   background: rgba(68, 68, 68, 0.1);
 `;
