@@ -17,7 +17,12 @@ import { useSnackbar } from 'notistack';
  *  + submit-btn btn
  */
 const errorMessage = 'Please fill out this field';
-
+const initialUser = {
+  name: '',
+  lastname: '',
+  email: '',
+  message: '',
+};
 const isEmptyObject = (obj) => {
   for (var key in obj) {
     if (key !== 'lastname' && obj[key] === '') {
@@ -30,12 +35,7 @@ const isEmptyObject = (obj) => {
 const ContactSection = () => {
   const { enqueueSnackbar } = useSnackbar();
   const [error, setError] = useState(false);
-  const [user, setUser] = useState({
-    name: '',
-    lastname: '',
-    email: '',
-    message: '',
-  });
+  const [user, setUser] = useState(initialUser);
 
   const handleNameChange = (event) =>
     setUser({ ...user, name: event.target.value });
@@ -54,6 +54,10 @@ const ContactSection = () => {
       setError(true);
     } else {
       console.log('send email');
+      console.log('user values', user);
+      setError(false);
+      setUser(initialUser);
+
       enqueueSnackbar('This is a success message!', { variant: 'success' });
     }
   };
