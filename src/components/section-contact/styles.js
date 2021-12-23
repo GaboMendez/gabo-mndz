@@ -80,6 +80,17 @@ export const CardWrapper = styled.div`
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 `;
 
+export const FullnameWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
+`;
+
 export const SubmitButton = styled.button`
   font-size: 18px;
   padding: 0.7em 1em;

@@ -1,6 +1,13 @@
 import TextField from '@material-ui/core/TextField';
 import React, { useState } from 'react';
-import { CardWrapper, ContactWrapper, SubmitButton, Title } from './styles';
+import {
+  CardWrapper,
+  ContactWrapper,
+  FullnameWrapper,
+  SubmitButton,
+  Title,
+} from './styles';
+import { useSnackbar } from 'notistack';
 /**
  * Layout
  *  + contact-page
@@ -21,6 +28,7 @@ const isEmptyObject = (obj) => {
 };
 
 const ContactSection = () => {
+  const { enqueueSnackbar } = useSnackbar();
   const [error, setError] = useState(false);
   const [user, setUser] = useState({
     name: '',
@@ -46,6 +54,7 @@ const ContactSection = () => {
       setError(true);
     } else {
       console.log('send email');
+      enqueueSnackbar('This is a success message!', { variant: 'success' });
     }
   };
 
@@ -53,14 +62,7 @@ const ContactSection = () => {
     <ContactWrapper id='contact'>
       <CardWrapper>
         <Title>GET IN TOUCH</Title>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            columnGap: 8,
-          }}
-        >
+        <FullnameWrapper>
           <TextField
             id='outlined-basic'
             label='Name'
@@ -78,7 +80,7 @@ const ContactSection = () => {
             value={user.lastname}
             onChange={handleLastnameChange}
           />
-        </div>
+        </FullnameWrapper>
 
         <TextField
           id='outlined-basic'

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { SnackbarProvider } from 'notistack';
 import { useEffect, useState } from 'react';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
@@ -23,7 +24,7 @@ function MyApp({ Component, pageProps }) {
   };
 
   return (
-    <>
+    <SnackbarProvider maxSnack={3} autoHideDuration={3000}>
       <Head>
         <title>gabo-dev</title>
         <link rel='icon' href='/command.png' />
@@ -58,7 +59,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <Scroll />
       <Footer />
-    </>
+    </SnackbarProvider>
   );
 }
 
