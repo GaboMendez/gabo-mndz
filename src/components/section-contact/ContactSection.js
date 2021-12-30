@@ -61,36 +61,38 @@ const ContactSection = () => {
   const handleSubmit = () => {
     if (isEmptyObject(user)) {
       setError(true);
-    } else {
-      if (!validateEmail(user.email)) {
-        enqueueSnackbar(`Email '${user.email}' is not valid!`, {
-          variant: 'error',
-        });
-        return;
-      }
-      console.log('send email');
-      console.log('user values', user);
-
-      fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json, text/plain, */*',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(user),
-      }).then((res) => {
-        console.log('Response received');
-        if (res.status === 200) {
-          console.log('Response succeeded!');
-          setError(false);
-          setUser(initialUser);
-          enqueueSnackbar(
-            'Mail sent successfully, will get back to you later!',
-            { variant: 'success' }
-          );
-        }
-      });
+      return;
     }
+
+    if (!validateEmail(user.email)) {
+      enqueueSnackbar('You have entered an invalid email address!', {
+        variant: 'error',
+      });
+      return;
+    }
+
+    console.log('send email');
+    console.log('user values', user);
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    }).then((res) => {
+      console.log('Response received');
+      if (res.status === 200) {
+        console.log('Response succeeded!');
+
+        setError(false);
+        setUser(initialUser);
+        enqueueSnackbar('Mail sent successfully, will get back to you later!', {
+          variant: 'success',
+        });
+      }
+    });
   };
 
   return (
