@@ -23,6 +23,7 @@ const initialUser = {
   email: '',
   message: '',
 };
+
 const isEmptyObject = (obj) => {
   for (var key in obj) {
     if (key !== 'lastname' && obj[key] === '') {
@@ -30,6 +31,14 @@ const isEmptyObject = (obj) => {
     }
   }
   return false;
+};
+
+const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
 };
 
 const ContactSection = () => {
@@ -53,12 +62,34 @@ const ContactSection = () => {
     if (isEmptyObject(user)) {
       setError(true);
     } else {
+      if (!validateEmail(user.email)) {
+        enqueueSnackbar(`Email '${user.email}' is not valid!`, {
+          variant: 'error',
+        });
+        return;
+      }
       console.log('send email');
       console.log('user values', user);
-      setError(false);
-      setUser(initialUser);
 
-      enqueueSnackbar('This is a success message!', { variant: 'success' });
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user),
+      }).then((res) => {
+        console.log('Response received');
+        if (res.status === 200) {
+          console.log('Response succeeded!');
+          setError(false);
+          setUser(initialUser);
+          enqueueSnackbar(
+            'Mail sent successfully, will get back to you later!',
+            { variant: 'success' }
+          );
+        }
+      });
     }
   };
 
