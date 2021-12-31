@@ -1,3 +1,4 @@
+import { ThemeProvider } from '@material-ui/core/styles';
 import Head from 'next/head';
 import { SnackbarProvider } from 'notistack';
 import { useEffect, useState } from 'react';
@@ -6,6 +7,7 @@ import Navbar from '../components/navbar';
 import Scroll from '../components/scroll';
 import Sidebar from '../components/sidebar';
 import '../styles/globals.css';
+import theme from '../styles/theme';
 
 function MyApp({ Component, pageProps }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,11 +56,13 @@ function MyApp({ Component, pageProps }) {
           href='https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css'
         />
       </Head>
-      <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
-      <Navbar handleToggle={handleToggle} />
-      <Component {...pageProps} />
-      <Scroll />
-      <Footer />
+      <ThemeProvider theme={theme}>
+        <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
+        <Navbar handleToggle={handleToggle} />
+        <Component {...pageProps} />
+        <Scroll />
+        <Footer />
+      </ThemeProvider>
     </SnackbarProvider>
   );
 }

@@ -104,6 +104,7 @@ const ContactSection = () => {
             id='outlined-basic'
             label='Name'
             variant='outlined'
+            autoComplete='off'
             value={user.name}
             onChange={handleNameChange}
             error={error && user.name === ''}
@@ -113,6 +114,7 @@ const ContactSection = () => {
             id='outlined-basic'
             label='Last name'
             variant='outlined'
+            autoComplete='off'
             helperText=' '
             value={user.lastname}
             onChange={handleLastnameChange}
@@ -123,6 +125,7 @@ const ContactSection = () => {
           id='outlined-basic'
           label='Email'
           variant='outlined'
+          autoComplete='off'
           value={user.email}
           onChange={handleEmailChange}
           error={error && user.email === ''}

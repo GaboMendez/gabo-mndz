@@ -17,8 +17,10 @@ export default (req, res) => {
     to: 'gabriel.mendez0@hotmail.com',
     subject: `Message From ${req.body.name} ${req.body.lastname}`,
     text: req.body.message + ' | Sent from: ' + req.body.email,
-    html: `<div>${req.body.message}</div><p>Sent from:
-    ${req.body.email}</p>`,
+    html: `<p>Hello Gabriel,</p>
+    <p>You got a new message from ${req.body.name}:</p>
+    <p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">${req.body.message}</p>
+    <p>Sent from: ${req.body.email}</p>`,
   };
 
   transporter.sendMail(mailData, function (err, info) {
