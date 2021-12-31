@@ -101,7 +101,6 @@ const ContactSection = () => {
         <Title>GET IN TOUCH</Title>
         <FullnameWrapper>
           <TextField
-            id='outlined-basic'
             label='Name'
             variant='outlined'
             autoComplete='off'
@@ -111,7 +110,6 @@ const ContactSection = () => {
             helperText={error && user.name === '' ? errorMessage : ' '}
           />
           <TextField
-            id='outlined-basic'
             label='Last name'
             variant='outlined'
             autoComplete='off'
@@ -122,7 +120,6 @@ const ContactSection = () => {
         </FullnameWrapper>
 
         <TextField
-          id='outlined-basic'
           label='Email'
           variant='outlined'
           autoComplete='off'
@@ -134,7 +131,6 @@ const ContactSection = () => {
         />
 
         <TextField
-          id='outlined-basic'
           label='Message'
           variant='outlined'
           value={user.message}
