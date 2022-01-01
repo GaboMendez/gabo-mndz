@@ -17,15 +17,12 @@ const InfoSection = ({
   id,
   lightBg,
   lightText,
-  lightTextDesc,
   topLine,
   headLine,
   description,
   imgStart,
   img,
   alt,
-  dark,
-  primary,
   darkText,
 }) => {
   return (
