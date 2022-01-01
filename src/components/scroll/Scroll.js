@@ -25,7 +25,6 @@ const Scroll = () => {
 
   return (
     <ScrollWrapper onClick={scrollToTop}>
-      {/* {} */}
       <IoIosArrowDropupCircle style={{ display: show ? 'inline' : 'none' }} />
     </ScrollWrapper>
   );
