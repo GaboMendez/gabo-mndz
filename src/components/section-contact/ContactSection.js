@@ -72,6 +72,7 @@ const ContactSection = () => {
     }
 
     console.log('send email');
+
     console.log('user values', user);
 
     fetch('/api/contact', {
