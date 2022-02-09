@@ -71,7 +71,6 @@ export const NavbarMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  margin-right: -22px;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -79,14 +78,13 @@ export const NavbarMenu = styled.ul`
 `;
 
 export const NavItemWrapper = styled.li`
-  height: 80px;
+  cursor: pointer;
+  height: 100%;
   color: #ffffff;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
   font-size: 1.15rem;
   &:hover {
     color: #009ddc;
@@ -95,7 +93,15 @@ export const NavItemWrapper = styled.li`
 `;
 
 export const NavItem = styled(Link)`
+  padding: 34px 0 22px;
+  margin-left: 8px;
+  margin-right: 8px;
+
   &.active {
+    margin: 0 -10px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 19px;
     border-bottom: 3px solid #009ddc;
   }
 `;

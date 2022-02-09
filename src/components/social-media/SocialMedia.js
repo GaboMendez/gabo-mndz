@@ -1,5 +1,10 @@
 import React from 'react';
-import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import {
+  FaStackOverflow,
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+} from 'react-icons/fa';
 import {
   IconLink,
   SocialContainer,
@@ -22,9 +27,9 @@ const items = [
   },
   {
     id: 3,
-    name: 'Facebook',
-    icon: <FaFacebook />,
-    link: '//facebook.com/GaboMndzz',
+    name: 'Stackoverflow',
+    icon: <FaStackOverflow />,
+    link: '//stackoverflow.com/users/12363923/gaboreyes',
   },
   {
     id: 4,
