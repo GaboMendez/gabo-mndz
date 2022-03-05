@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SkillsContainer = styled.div`
   height: 760px;
-  padding: 0 74px;
+  padding: 12px 74px 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

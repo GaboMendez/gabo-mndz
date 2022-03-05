@@ -47,9 +47,9 @@ export const Column02 = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  max-width: 540px;
+  max-width: 480px;
   padding-top: 0;
-  padding-bottom: 20px;
+  padding-bottom: 28px;
 
   @media screen and (min-width: 780px) {
     margin-bottom: -50px;
@@ -79,9 +79,8 @@ export const Heading = styled.h1`
 `;
 
 export const SubTitle = styled.p`
-  max-width: 440px;
-  margin-bottom: 35px;
-  font-size: 18px;
+  margin-bottom: 34px;
+  font-size: 19px;
   line-height: 24px;
   color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
 `;

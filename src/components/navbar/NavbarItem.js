@@ -8,7 +8,7 @@ const NavbarItem = ({ path, title }) => {
         to={path}
         spy={true}
         smooth={true}
-        offset={-60}
+        offset={-44}
         duration={800}
       >
         {!!title && title}

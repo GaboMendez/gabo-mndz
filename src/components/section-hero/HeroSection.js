@@ -32,7 +32,7 @@ const HeroSection = () => {
               to='about'
               spy={true}
               smooth={true}
-              offset={-60}
+              offset={-44}
               duration={800}
             />
           </ButtonWrapper>

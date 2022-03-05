@@ -9,9 +9,9 @@ const jobs = [
     position: 'Software Developer',
     date: 'August 2020 - Present',
     descriptions: [
-      'React, Next, TypeScript, JavaScript / ES6, SPA, Styled Components / CSS / SASS, HTML5',
-      'adasdsad',
-      'adasdasdsa',
+      'Design and develop responsive and high-performance applications with ReactJS and Java Spring',
+      'Collaborated with the designers to create beautiful and functional UI interfaces',
+      'CI/CD using Jenkins pipelines and Openshift alongside with Docker',
     ],
   },
   {
@@ -19,9 +19,9 @@ const jobs = [
     position: 'Mobile Developer',
     date: 'February 2020 - August 2020',
     descriptions: [
-      'Xamarin (MVVM, Prism), Kotlin (MVVM, MVP), Android SDK',
-      'adasdsad',
-      'adasdasdsa',
+      'Developer and Designer of Mobile Applications with Xamarin Forms and Kotlin',
+      'Develop user stories, handle issues and communicate with the team using Azure DevOps',
+      'Designed, analyzed, documented, and re-engineer multiple systems interfaces',
     ],
   },
   {
@@ -29,9 +29,9 @@ const jobs = [
     position: 'Mobile Developer',
     date: 'October 2019 - February 2020',
     descriptions: [
-      'Oracle / SQL Server, Spring Boot-Cloud, Java, C#, Rest API, OOP / Design Patterns',
-      'adasdsad',
-      'adasdasdsa',
+      'Developer and Designer of Mobile Applications with Xamarin Forms.',
+      'Develop maintainable, and scalable applications implementing the best practices and design patterns',
+      'Develop mobile application user interfaces and their functionality.',
     ],
   },
 ];

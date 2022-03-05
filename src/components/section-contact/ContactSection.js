@@ -82,7 +82,6 @@ const ContactSection = () => {
       console.log('Response received');
       if (res.status === 200) {
         console.log('Response succeeded!');
-
         setError(false);
         setUser(initialUser);
         enqueueSnackbar('Mail sent successfully, will get back to you later!', {
