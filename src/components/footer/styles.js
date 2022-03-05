@@ -58,4 +58,5 @@ export const WebsiteRights = styled.small`
   margin-top: 16px;
   font-family: 'Roboto', sans-serif;
   font-size: medium;
+  text-align: -webkit-center;
 `;

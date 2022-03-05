@@ -1,4 +1,14 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
 
 export const Title = styled.h1`
   color: #000;
@@ -52,6 +62,29 @@ export const Title = styled.h1`
   }
 `;
 
+export const EducationWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  h1 h2 {
+    padding: 0;
+    margin: 0;
+  }
+`;
+
+export const DiplomaWrapper = styled.h2`
+  text-decoration: underline;
+  &:hover {
+    color: #0286b9;
+    transition: 0.2s ease-in-out;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.32em;
+  }
+`;
+
 export const AboutWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -88,7 +121,7 @@ export const AboutWrapper = styled.div`
   }
 
   @media screen and (max-width: 420px) {
-    height: 1750px;
+    height: 1780px;
     padding: 12px 6px 0 4px;
   }
 `;
@@ -105,6 +138,12 @@ export const ColumnContent = styled.div`
 
   .css-mpnodf-TimelineTitleWrapper.right {
     justify-content: center;
+  }
+
+  .chrono-icons,
+  img {
+    max-width: 160% !important;
+    max-height: 160% !important;
   }
 
   @media screen and (min-width: 780px) {

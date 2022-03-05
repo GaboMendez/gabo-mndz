@@ -4,25 +4,48 @@ import { Chrono } from 'react-chrono';
 import { aboutObj } from '../section-info/data';
 import { Heading, SubTitle, TextWrapper } from '../section-info/styles';
 import JobSection from './JobSection';
-import { AboutWrapper, ColumnContent, Title } from './styles';
+import {
+  AboutWrapper,
+  ColumnContent,
+  DiplomaWrapper,
+  EducationWrapper,
+  Title,
+} from './styles';
 
-const items = [
+const educationItems = [
   {
-    title: 'October 2020',
-    cardTitle: 'Software Engineering',
-    cardSubtitle: `Technological Institute of Santo Domingo`,
-    cardDetailedText: `After France’s surrender in June 1940, Churchill told the British people`,
+    id: 0,
+    title: '2020 Oct',
+    study: 'Software Engineering',
+    location: `Technological Institute \nof Santo Domingo INTEC`,
   },
   {
-    title: 'July 2016',
-    cardTitle: 'Technical High School',
-    cardSubtitle: `Salesian Technical Institute ITESA`,
-    cardDetailedText: `After Japan’s occupation of French Indo-China in July 1941, US President Franklin D Roosevelt`,
+    id: 1,
+    title: 'Jul 2016',
+    study: 'Technical High School',
+    location: `Salesian Technical Institute ITESA`,
   },
   {
-    title: 'Certificates',
-    cardTitle: 'Pearl Harbor',
-    cardDetailedText: `After Japan’s occupation of French Indo-China in July 1941, US President Franklin D Roosevelt, `,
+    id: 2,
+    title: 'Diploma',
+    certifications: [
+      {
+        title: 'Web development with HTML/CSS/JS',
+        url: 'https://drive.google.com/file/d/12GkuxCQF8yK-dwi9G1SVsRpRIj1maNRE/view',
+      },
+      {
+        title: 'Web development with C#',
+        url: 'https://drive.google.com/file/d/1bAbKJEsGGmm4uGf4TMl9UAfebO7CTjL8/view',
+      },
+      {
+        title: 'Database Administrator',
+        url: 'https://drive.google.com/file/d/1EG1h2gZmwCsjRWy393fST9hyTKSnH2cI/view',
+      },
+      {
+        title: 'English Immersion Program ',
+        url: 'https://drive.google.com/file/d/1ACdZuxp3oKc8HBjvbMysfYzPryGpzWDj/view',
+      },
+    ],
   },
 ];
 
@@ -40,12 +63,12 @@ const AboutSection = () => {
         <ColumnContent>
           <Title alignCenter={isDesktop}>EDUCATION</Title>
           <Chrono
-            items={items}
+            items={educationItems}
             hideControls={!isDesktop}
             mode={isDesktop ? 'VERTICAL_ALTERNATING' : 'VERTICAL'}
             useReadMore={false}
             scrollable={false}
-            cardHeight={isTablet ? 200 : 'auto'}
+            cardHeight={isTablet ? 200 : '100px'}
             theme={{
               primary: '#000000',
               secondary: '#b6b6b6',
@@ -54,10 +77,27 @@ const AboutSection = () => {
               titleColor: '#000',
             }}
           >
+            {educationItems.map((item, idx) => {
+              return (
+                <React.Fragment key={idx}>
+                  <EducationWrapper>
+                    {item.study && <h1>{item.study}</h1>}
+                    {item.location && <h2>{item.location}</h2>}
+                    {item.certifications?.map((value) => (
+                      <DiplomaWrapper>
+                        <a href={value.url} target='_blank'>
+                          {value.title}
+                        </a>
+                      </DiplomaWrapper>
+                    ))}
+                  </EducationWrapper>
+                </React.Fragment>
+              );
+            })}
             <div className='chrono-icons'>
-              <img src='profile.svg' alt='image1' />
-              <img src='profile.svg' alt='image2' />
-              <img src='profile.svg' alt='image3' />
+              <img src='education/bachelor.png' alt='image1' />
+              <img src='education/technical.png' alt='image2' />
+              <img src='education/certification.png' alt='image3' />
             </div>
           </Chrono>
         </ColumnContent>

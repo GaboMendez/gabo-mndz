@@ -35,3 +35,12 @@ p {
 .MuiFormHelperText-contained {
   margin-left: 2px !important;
 }
+
+.card-description {
+  align-items: flex-start !important;
+}
+
+.timeline-card-content {
+  justify-content: center !important;
+  min-height: 0 !important;
+}
