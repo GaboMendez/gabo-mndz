@@ -46,6 +46,10 @@ p {
   min-height: 0 !important;
 }
 
+.TimelineVerticalWrapper {
+  padding: 1em 4px !important;
+}
+
 .css-vhsxso-VerticalCircleWrapper {
   margin-left: 4px !important;
   padding-left: 4px !important;
