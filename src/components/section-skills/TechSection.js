@@ -134,7 +134,7 @@ const TechSection = () => {
       <Title>TECHNOLOGIES I'VE WORKED ON</Title>
       <TechContainer className='shadow-bg'>
         <Slider
-          swipeToSlide={false}
+          swipeToSlide={true}
           cssEase={'linear'}
           afterChange={onSliderChange}
           beforeChange={() => setClickable(false)}
@@ -148,7 +148,7 @@ const TechSection = () => {
               <Tooltip
                 key={idx}
                 TransitionComponent={Fade}
-                TransitionProps={{ timeout: 10 }}
+                TransitionProps={{ timeout: 200 }}
                 enterTouchDelay={50}
                 title={isMobile ? '' : item.name}
                 PopperProps={{
