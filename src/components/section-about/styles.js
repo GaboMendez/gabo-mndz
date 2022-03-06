@@ -93,7 +93,15 @@ export const AboutWrapper = styled.div`
   flex-wrap: wrap;
   padding: 12px 50px 0 14px;
   gap: 20px;
-  height: 920px;
+  height: 860px;
+
+  @media screen and (max-width: 1030px) {
+    height: 930px;
+  }
+
+  @media screen and (max-width: 950px) {
+    height: 940px;
+  }
 
   @media screen and (max-width: 950px) {
     height: 940px;
