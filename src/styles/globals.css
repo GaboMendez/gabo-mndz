@@ -45,3 +45,8 @@ p {
   justify-content: center !important;
   min-height: 0 !important;
 }
+
+.css-vhsxso-VerticalCircleWrapper {
+  margin-left: 4px !important;
+  padding-left: 4px !important;
+}

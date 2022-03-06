@@ -154,8 +154,8 @@ export const ColumnContent = styled.div`
 
   .chrono-icons,
   img {
-    max-width: 140% !important;
-    max-height: 140% !important;
+    max-width: 130% !important;
+    max-height: 130% !important;
   }
 
   @media screen and (min-width: 780px) {
