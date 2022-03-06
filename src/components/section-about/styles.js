@@ -310,8 +310,10 @@ export const DownloadWrapper = styled.a`
     color: #fff;
   }
 
-  &:hover .face-primary {
-    margin-top: -50px;
+  @media (hover: none) {
+    &:hover .face-primary {
+      margin-top: -50px;
+    }
   }
 
   @media screen and (max-width: 420px) {
