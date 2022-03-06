@@ -103,6 +103,7 @@ export const SubmitButton = styled.button`
   transition: all 0.2s;
   box-shadow: 0 0 40px 40px #0082c3 inset, 0 0 0 0 #0082c3;
   color: white;
+  cursor: pointer;
 
   span {
     display: block;
@@ -130,7 +131,20 @@ export const SubmitButton = styled.button`
     }
   }
 
+  &:disabled {
+    border: 1px solid #b7b7b7;
+    background: #b7b7b7;
+    box-shadow: unset;
+    cursor: unset;
+  }
+
   &:active {
     transform: scale(0.95);
   }
+`;
+
+export const FooterWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
