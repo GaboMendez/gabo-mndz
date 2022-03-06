@@ -28,7 +28,7 @@ const educationItems = [
   },
   {
     id: 2,
-    title: 'Course',
+    title: 'Courses',
     certifications: [
       {
         title: 'Web development with HTML/CSS/JS',
