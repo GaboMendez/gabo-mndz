@@ -1,6 +1,7 @@
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import React from 'react';
 import { Chrono } from 'react-chrono';
+import { FaEye, FaRegHdd } from 'react-icons/fa';
 import { aboutObj } from '../section-info/data';
 import { Heading, SubTitle, TextWrapper } from '../section-info/styles';
 import JobSection from './JobSection';
@@ -8,10 +9,10 @@ import {
   AboutWrapper,
   ColumnContent,
   DiplomaWrapper,
+  DownloadWrapper,
   EducationWrapper,
   Title,
 } from './styles';
-
 const educationItems = [
   {
     id: 0,
@@ -83,8 +84,8 @@ const AboutSection = () => {
                   <EducationWrapper>
                     {item.study && <h1>{item.study}</h1>}
                     {item.location && <h2>{item.location}</h2>}
-                    {item.certifications?.map((value) => (
-                      <DiplomaWrapper>
+                    {item.certifications?.map((value, idx) => (
+                      <DiplomaWrapper key={idx}>
                         <a href={value.url} target='_blank'>
                           {value.title}
                         </a>
@@ -103,6 +104,19 @@ const AboutSection = () => {
         </ColumnContent>
 
         <ColumnContent>
+          <DownloadWrapper
+            href='/files/CV_Gabriel_Mendez.pdf'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <div className='face-primary'>
+              <FaEye size={25} /> Open CV
+            </div>
+
+            <div className='face-secondary'>
+              <FaRegHdd size={26} /> Size: 88 kb
+            </div>
+          </DownloadWrapper>
           <TextWrapper>
             <Title> {topLine} </Title>
             <Heading lightText={lightText}> {headLine} </Heading>

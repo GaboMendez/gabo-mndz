@@ -1,4 +1,5 @@
 import TextField from '@material-ui/core/TextField';
+import { useSnackbar } from 'notistack';
 import React, { useState } from 'react';
 import {
   CardWrapper,
@@ -7,15 +8,7 @@ import {
   SubmitButton,
   Title,
 } from './styles';
-import { useSnackbar } from 'notistack';
-/**
- * Layout
- *  + contact-page
- *  + contact-form
- *  + form-group
- *  + form-control
- *  + submit-btn btn
- */
+
 const errorMessage = 'Please fill out this field';
 const initialUser = {
   name: '',

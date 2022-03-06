@@ -158,7 +158,7 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const ButtonScroll = styled(Button)`
-  padding: 10px 20px;
+  padding: 14px 20px;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 18px;

@@ -13,7 +13,7 @@ const fadeIn = keyframes`
 export const Title = styled.h1`
   color: #000;
   font-size: 2.4rem;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   align-self: ${(props) =>
     props.alignRight
       ? 'flex-end'
@@ -93,7 +93,7 @@ export const AboutWrapper = styled.div`
   flex-wrap: wrap;
   padding: 12px 50px 0 14px;
   gap: 20px;
-  height: 880px;
+  height: 900px;
 
   @media screen and (max-width: 950px) {
     height: 940px;
@@ -123,6 +123,10 @@ export const AboutWrapper = styled.div`
   @media screen and (max-width: 420px) {
     height: 1780px;
     padding: 12px 6px 0 4px;
+  }
+
+  @media screen and (max-width: 380px) {
+    height: 1890px;
   }
 `;
 
@@ -168,7 +172,7 @@ export const JobsWrapper = styled.div`
   }
 `;
 
-export const JobInfo = styled.article`
+export const JobInfo = styled.div`
   h3 {
     font-weight: 400;
   }
@@ -263,5 +267,47 @@ export const JobContainer = styled.div`
     .active-btn {
       box-shadow: 2px 0 #009ddc;
     }
+  }
+`;
+
+export const DownloadWrapper = styled.a`
+  position: absolute;
+  right: 50px;
+  margin-top: 26px;
+  height: 50px;
+  border: 3px solid #0082c3;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #0082c3;
+  overflow: hidden;
+  cursor: pointer;
+
+  svg {
+    margin-right: 6px;
+    padding-top: 6px;
+    margin-bottom: -2px;
+  }
+
+  .face-primary,
+  .face-secondary {
+    padding: 0 10px;
+    line-height: 50px;
+    transition: margin 0.4s;
+  }
+
+  .face-primary {
+    background-color: #0082c3;
+    color: #fff;
+  }
+
+  &:hover .face-primary {
+    margin-top: -50px;
+  }
+
+  @media screen and (max-width: 420px) {
+    right: 14px;
+    margin-top: 0px;
   }
 `;

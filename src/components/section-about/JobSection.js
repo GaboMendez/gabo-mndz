@@ -47,7 +47,7 @@ const JobSection = () => {
       <Title alignRight={!isMobile}>WORK EXPERIENCE</Title>
       <JobContainer>
         <JobsWrapper>
-          <JobInfo>
+          <JobInfo className='wow bounceInRigh animated'>
             <h3>{position}</h3>
             <h4>{company}</h4>
             <p className='job-date'>{date}</p>
