@@ -49,7 +49,6 @@ export const Column02 = styled.div`
 export const TextWrapper = styled.div`
   max-width: 480px;
   padding-top: 0;
-  padding-bottom: 28px;
 
   @media screen and (min-width: 780px) {
     margin-bottom: -50px;
@@ -68,20 +67,22 @@ export const TopLine = styled.p`
 
 export const Heading = styled.h1`
   color: #fff;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   line-height: 1.1;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
+    margin-bottom: 0px;
   }
 `;
 
 export const SubTitle = styled.p`
-  margin-bottom: 34px;
+  margin-bottom: 24px;
   font-size: 19px;
-  line-height: 24px;
+  line-height: 28px;
+  margin-right: 6px;
   color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
 `;
 

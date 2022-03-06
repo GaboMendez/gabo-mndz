@@ -120,8 +120,8 @@ const AboutSection = () => {
           <TextWrapper>
             <Title> {topLine} </Title>
             <Heading lightText={lightText}> {headLine} </Heading>
-            <SubTitle darkText={darkText}>{description}</SubTitle>
           </TextWrapper>
+          <SubTitle darkText={darkText}>{description}</SubTitle>
           <JobSection />
         </ColumnContent>
       </AboutWrapper>
