@@ -1,9 +1,11 @@
+import CircularProgress from '@material-ui/core/CircularProgress';
 import TextField from '@material-ui/core/TextField';
 import { useSnackbar } from 'notistack';
 import React, { useState } from 'react';
 import {
   CardWrapper,
   ContactWrapper,
+  FooterWrapper,
   FullnameWrapper,
   SubmitButton,
   Title,
@@ -37,6 +39,8 @@ const validateEmail = (email) => {
 const ContactSection = () => {
   const { enqueueSnackbar } = useSnackbar();
   const [error, setError] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [user, setUser] = useState(initialUser);
 
   const handleNameChange = (event) =>
@@ -64,6 +68,8 @@ const ContactSection = () => {
       return;
     }
 
+    setDisabled(true);
+    setLoading(true);
     fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -81,6 +87,8 @@ const ContactSection = () => {
           variant: 'success',
         });
       }
+      setDisabled(false);
+      setLoading(false);
     });
   };
 
@@ -130,24 +138,26 @@ const ContactSection = () => {
           fullWidth
           multiline
         />
-
-        <SubmitButton onClick={handleSubmit}>
-          <div className='svg-wrapper'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              width='24'
-              height='24'
-            >
-              <path fill='none' d='M0 0h24v24H0z'></path>
-              <path
-                fill='currentColor'
-                d='M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z'
-              ></path>
-            </svg>
-          </div>
-          <span>SEND</span>
-        </SubmitButton>
+        <FooterWrapper>
+          <SubmitButton onClick={handleSubmit} disabled={disabled}>
+            <div className='svg-wrapper'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                width='24'
+                height='24'
+              >
+                <path fill='none' d='M0 0h24v24H0z'></path>
+                <path
+                  fill='currentColor'
+                  d='M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z'
+                ></path>
+              </svg>
+            </div>
+            <span>SEND</span>
+          </SubmitButton>
+          {loading && <CircularProgress />}
+        </FooterWrapper>
       </CardWrapper>
     </ContactWrapper>
   );
