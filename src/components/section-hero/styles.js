@@ -172,7 +172,7 @@ export const ButtonScroll = styled(Button)`
   box-shadow: 0 0 40px 40px #0082c3 inset, 0 0 0 0 #0082c3;
   transition: all 150ms ease-in-out;
 
-  @media (hover: hover) {
+  @media (hover: none) {
     &:hover {
       box-shadow: 0 0 10px 0 #0082c3 inset, 0 0 10px 4px #0082c3;
       transform: translate3d(0, -2px, 0);

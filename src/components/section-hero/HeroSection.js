@@ -1,3 +1,4 @@
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import React from 'react';
 import SocialMedia from '../social-media';
 import {
@@ -13,6 +14,7 @@ import {
 } from './styles';
 
 const HeroSection = () => {
+  const isMobile = useMediaQuery('(max-width:480px)');
   return (
     <HeroContainer id='home'>
       <HeroBg>
@@ -32,7 +34,7 @@ const HeroSection = () => {
               to='about'
               spy={true}
               smooth={true}
-              offset={-44}
+              offset={isMobile ? -68 : -44}
               duration={800}
             />
           </ButtonWrapper>

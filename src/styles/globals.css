@@ -36,6 +36,7 @@ p {
   margin-left: 2px !important;
 }
 
+/* Timeline */
 .card-description {
   align-items: flex-start !important;
 }
@@ -43,4 +44,8 @@ p {
 .timeline-card-content {
   justify-content: center !important;
   min-height: 0 !important;
+}
+
+.timeline-item-title {
+  margin-right: 20px !important;
 }
