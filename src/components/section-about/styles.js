@@ -154,8 +154,8 @@ export const ColumnContent = styled.div`
 
   .chrono-icons,
   img {
-    max-width: 160% !important;
-    max-height: 160% !important;
+    max-width: 110% !important;
+    max-height: 110% !important;
   }
 
   @media screen and (min-width: 780px) {
@@ -310,8 +310,10 @@ export const DownloadWrapper = styled.a`
     color: #fff;
   }
 
-  &:hover .face-primary {
-    margin-top: -50px;
+  @media (hover: hover) {
+    &:hover .face-primary {
+      margin-top: -50px;
+    }
   }
 
   @media screen and (max-width: 420px) {

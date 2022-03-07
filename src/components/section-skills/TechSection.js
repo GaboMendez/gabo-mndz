@@ -64,7 +64,7 @@ const technologies = [
 
 const TechSection = () => {
   const isDesktop = useMediaQuery('(min-width:1224px)');
-
+  const isMobile = useMediaQuery('(max-width:480px)');
   const [clickable, setClickable] = useState(false);
 
   const onSliderChange = () => {
@@ -73,7 +73,6 @@ const TechSection = () => {
 
   const settings = {
     dots: true,
-    infinite: true,
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 1,
@@ -140,6 +139,7 @@ const TechSection = () => {
           afterChange={onSliderChange}
           beforeChange={() => setClickable(false)}
           autoplaySpeed={3000}
+          infinite={!isMobile}
           autoplay
           {...settings}
         >
@@ -150,7 +150,7 @@ const TechSection = () => {
                 TransitionComponent={Fade}
                 TransitionProps={{ timeout: 200 }}
                 enterTouchDelay={50}
-                title={item.name}
+                title={isMobile ? '' : item.name}
                 PopperProps={{
                   popperOptions: {
                     modifiers: {
