@@ -14,7 +14,6 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     window.history.scrollRestoration = 'manual';
-
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
