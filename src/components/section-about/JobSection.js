@@ -7,7 +7,7 @@ const jobs = [
   {
     company: 'Xpert Code',
     position: 'Software Developer',
-    date: 'Setember 2019 - Present',
+    date: 'September 2019 - Present',
     descriptions: [
       'Design and develop responsive and high-performance applications with ReactJS and Java Spring',
       'Collaborated with the designers to create beautiful and functional UI interfaces',
