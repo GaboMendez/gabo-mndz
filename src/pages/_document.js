@@ -29,6 +29,7 @@ class MyDocument extends Document {
       <Html lang='en'>
         <Head />
         <body>
+          <script>0</script>
           <Main />
           <NextScript />
         </body>
