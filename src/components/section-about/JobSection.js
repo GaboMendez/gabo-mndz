@@ -7,7 +7,7 @@ const jobs = [
   {
     company: 'Xpert Code',
     position: 'Software Developer',
-    date: 'August 2020 - Present',
+    date: 'Setember 2019 - Present',
     descriptions: [
       'Design and develop responsive and high-performance applications with ReactJS and Java Spring',
       'Collaborated with the designers to create beautiful and functional UI interfaces',
@@ -17,7 +17,7 @@ const jobs = [
   {
     company: 'Caribe Media',
     position: 'Mobile Developer',
-    date: 'February 2020 - August 2020',
+    date: 'March 2018 - July 2019',
     descriptions: [
       'Developer and Designer of Mobile Applications with Xamarin Forms and Kotlin',
       'Develop user stories, handle issues and communicate with the team using Azure DevOps',
@@ -27,7 +27,7 @@ const jobs = [
   {
     company: 'Planeta Azul',
     position: 'Mobile Developer',
-    date: 'October 2019 - February 2020',
+    date: 'October 2017 - February 2018',
     descriptions: [
       'Developer and Designer of Mobile Applications with Xamarin Forms.',
       'Develop maintainable, and scalable applications implementing the best practices and design patterns',
