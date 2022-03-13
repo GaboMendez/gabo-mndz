@@ -6,8 +6,8 @@ import { JobContainer, JobInfo, JobsWrapper, JobTabs, Title } from './styles';
 const jobs = [
   {
     company: 'Xpert Code',
-    position: 'Software Developer',
-    date: 'September 2019 - Present',
+    position: 'Senior Software Engineer',
+    date: 'August 2019 - Present',
     descriptions: [
       'Design and develop responsive and high-performance applications with ReactJS and Java Spring',
       'Collaborated with the designers to create beautiful and functional UI interfaces',
@@ -16,20 +16,20 @@ const jobs = [
   },
   {
     company: 'Caribe Media',
-    position: 'Mobile Developer',
+    position: 'Software Engineer',
     date: 'March 2018 - July 2019',
     descriptions: [
-      'Developer and Designer of Mobile Applications with Xamarin Forms and Kotlin',
+      'Developer and Designer of Software Applications with ReactJS and Xamarin Forms',
       'Develop user stories, handle issues and communicate with the team using Azure DevOps',
       'Designed, analyzed, documented, and re-engineer multiple systems interfaces',
     ],
   },
   {
     company: 'Planeta Azul',
-    position: 'Mobile Developer',
+    position: 'Software Engineer',
     date: 'October 2017 - February 2018',
     descriptions: [
-      'Developer and Designer of Mobile Applications with Xamarin Forms.',
+      'Developer and Designer of Software Applications with ReactJS and Xamarin Forms',
       'Develop maintainable, and scalable applications implementing the best practices and design patterns',
       'Develop mobile application user interfaces and their functionality.',
     ],
