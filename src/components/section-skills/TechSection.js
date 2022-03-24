@@ -26,9 +26,9 @@ const technologies = [
   },
   {
     id: 4,
-    name: 'XAMARIN',
-    img: '/tech/xamarin.png',
-    link: 'https://docs.microsoft.com/en-us/xamarin/',
+    name: 'NODE',
+    img: '/tech/node_js.png',
+    link: 'https://nodejs.org/es/docs/',
   },
   {
     id: 5,
@@ -59,6 +59,12 @@ const technologies = [
     name: 'ORACLE',
     img: '/tech/oracle.png',
     link: 'https://www.techonthenet.com/oracle/index.php',
+  },
+  {
+    id: 10,
+    name: 'XAMARIN',
+    img: '/tech/xamarin.png',
+    link: 'https://docs.microsoft.com/en-us/xamarin/',
   },
 ];
 

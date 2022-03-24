@@ -31,7 +31,7 @@ const skills = [
     title: 'Back End Development',
     icon: <FaDatabase size={50} color={'#010606'} />,
     description:
-      'Oracle / SQL Server, Spring Boot-Cloud, Java, C#, Rest API, OOP / Design Patterns',
+      'Oracle / SQL Server / PostgreSQL, Node, Spring Boot-Cloud, Java, C#, Rest API, OOP / Design Patterns',
   },
   {
     title: 'DevOps',
