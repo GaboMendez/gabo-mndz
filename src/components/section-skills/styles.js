@@ -109,7 +109,7 @@ export const SkillsCard = styled.div`
   background: #fff;
   display: flex;
   height: 100%;
-  min-height: 160px;
+  min-height: 176px;
   max-height: 240px;
   min-width: 220px;
   row-gap: 12px;
