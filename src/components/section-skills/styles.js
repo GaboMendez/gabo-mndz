@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SkillsContainer = styled.div`
-  height: 760px;
+  height: 740px;
   padding: 12px 74px 0;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@ export const SkillsContainer = styled.div`
   }
 
   @media screen and (max-width: 1068px) {
-    height: 920px;
+    height: 940px;
     padding: 0 64px;
   }
 
@@ -28,7 +28,7 @@ export const SkillsContainer = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    height: 1220px;
+    height: 1300px;
     padding: 0 44px;
   }
 `;
