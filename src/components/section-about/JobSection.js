@@ -7,7 +7,7 @@ const jobs = [
   {
     company: 'Xpert Code',
     position: 'Senior Software Engineer',
-    date: 'August 2019 - Present',
+    date: 'Jan 2020 - Present',
     descriptions: [
       'Design and develop responsive and high-performance applications with ReactJS and Java Spring',
       'Collaborated with the designers to create beautiful and functional UI interfaces',
@@ -17,9 +17,9 @@ const jobs = [
   {
     company: 'Caribe Media',
     position: 'Software Engineer',
-    date: 'March 2018 - July 2019',
+    date: 'March 2019 - Jan 2020',
     descriptions: [
-      'Developer and Designer of Software Applications with ReactJS and Xamarin Forms',
+      'Developer and Designer of Software Applications with React Native and Xamarin Forms',
       'Develop user stories, handle issues and communicate with the team using Azure DevOps',
       'Designed, analyzed, documented, and re-engineer multiple systems interfaces',
     ],
@@ -27,7 +27,7 @@ const jobs = [
   {
     company: 'Planeta Azul',
     position: 'Software Engineer',
-    date: 'October 2017 - February 2018',
+    date: 'October 2018 - March 2019',
     descriptions: [
       'Developer and Designer of Software Applications with ReactJS and Xamarin Forms',
       'Develop maintainable, and scalable applications implementing the best practices and design patterns',
