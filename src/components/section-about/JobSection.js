@@ -5,12 +5,35 @@ import { JobContainer, JobInfo, JobsWrapper, JobTabs, Title } from './styles';
 
 const jobs = [
   {
-    company: 'Xpert Code',
-    position: 'Senior Software Engineer',
-    date: 'Jan 2020 - Present',
+    company: 'Banco Central',
+    position: 'Software Engineer',
+    date: 'May 2021 - Jul 2022',
     descriptions: [
-      'Design and develop responsive and high-performance applications with ReactJS and Java Spring',
+      'Developed full-stack applications using React and C# with microservices architecture',
+      'Built and maintained cross-platform mobile applications with React Native',
+      'Applied agile methodologies for efficient project delivery and team collaboration',
+      'Created intuitive user interfaces following UX best practices and design principles'
+    ],
+  },
+  {
+    company: 'Banco Popular',
+    position: 'Software Engineer',
+    date: 'May 2021 - Jul 2022',
+    descriptions: [
+      'Developed and maintained microservices architecture using Nest and GraphQL APIs',
+      'Built and deployed cross-platform mobile applications with React Native',
+      'Integrated GraphQL federation for distributed microservices data querying',
+      'Implemented DevOps practices using GitLab CI/CD pipelines',
+    ],
+  },
+  {
+    company: 'Xpert Code',
+    position: 'Software Engineer',
+    date: 'Jan 2020 - May 2021',
+    descriptions: [
+      'Design and develop responsive and high-performance applications with React and Java Spring',
       'Collaborated with the designers to create beautiful and functional UI interfaces',
+      'Collaborated with the team to design robust software solutions using SCRUM methodology',
       'CI/CD using Jenkins pipelines and Openshift alongside with Docker',
     ],
   },
@@ -29,7 +52,7 @@ const jobs = [
     position: 'Software Engineer',
     date: 'October 2018 - March 2019',
     descriptions: [
-      'Developer and Designer of Software Applications with ReactJS and Xamarin Forms',
+      'Developer and Designer of Software Applications with React and Xamarin Forms',
       'Develop maintainable, and scalable applications implementing the best practices and design patterns',
       'Develop mobile application user interfaces and their functionality.',
     ],

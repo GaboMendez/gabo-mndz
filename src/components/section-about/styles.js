@@ -13,7 +13,7 @@ const fadeIn = keyframes`
 export const Title = styled.h1`
   color: #000;
   font-size: 2.4rem;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   align-self: ${(props) =>
     props.alignRight
       ? 'flex-end'
@@ -87,32 +87,27 @@ export const DiplomaWrapper = styled.h2`
 
 export const AboutWrapper = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 12px 50px 0 14px;
   gap: 20px;
-  height: 860px;
+  min-height: 860px;
 
   @media screen and (max-width: 1030px) {
-    height: 930px;
+    min-height: 930px;
   }
 
   @media screen and (max-width: 950px) {
-    height: 940px;
-  }
-
-  @media screen and (max-width: 950px) {
-    height: 940px;
+    min-height: 940px;
   }
 
   @media screen and (max-width: 850px) {
-    height: 930px;
+    min-height: 930px;
   }
 
   @media screen and (max-width: 780px) {
-    height: 1400px;
+    min-height: 1400px;
     padding-top: 20px;
 
     ${Title} {
@@ -121,20 +116,20 @@ export const AboutWrapper = styled.div`
   }
 
   @media screen and (max-width: 568px) {
-    height: 1450px;
+    min-height: 1450px;
   }
 
   @media screen and (max-width: 480px) {
-    height: 1650px;
+    min-height: 1650px;
   }
 
   @media screen and (max-width: 420px) {
-    height: 1780px;
+    min-height: 1780px;
     padding: 12px 12px 0 4px;
   }
 
   @media screen and (max-width: 380px) {
-    height: 1890px;
+    min-height: 1890px;
   }
 `;
 
@@ -183,6 +178,7 @@ export const JobsWrapper = styled.div`
 export const JobInfo = styled.div`
   h3 {
     font-weight: 400;
+    margin-bottom: 0.3rem;
   }
 
   h4 {
@@ -193,6 +189,10 @@ export const JobInfo = styled.div`
     padding: 0.375rem 0.75rem;
     border-radius: 0.25rem;
     margin: 0;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
   }
 
   @media screen and (max-width: 1100px) {
@@ -208,7 +208,7 @@ export const JobTabs = styled.div`
   @media screen and (min-width: 1100px) {
     flex-direction: column;
     justify-content: flex-start;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   @media screen and (max-width: 1100px) {
@@ -247,6 +247,7 @@ export const JobContainer = styled.div`
 
   .job-date {
     letter-spacing: 0.2rem;
+    margin-bottom: 0;
   }
 
   .job-icon {
