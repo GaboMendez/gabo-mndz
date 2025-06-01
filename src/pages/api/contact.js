@@ -2,7 +2,11 @@ export default async (req, res) => {
   let nodemailer = require('nodemailer');
   require('dotenv').config();
 
-  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD || !process.env.EMAIL_TO) {
+  if (
+    !process.env.EMAIL_USER ||
+    !process.env.EMAIL_PASSWORD ||
+    !process.env.EMAIL_TO
+  ) {
     console.error('Missing required environment variables');
     return res.status(500).json({ error: 'Server configuration error' });
   }
