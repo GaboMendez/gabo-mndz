@@ -43,6 +43,10 @@ const educationItems = [
         url: 'https://drive.google.com/file/d/1bAbKJEsGGmm4uGf4TMl9UAfebO7CTjL8/view',
       },
       {
+        title: 'Kotlin for Android',
+        url: 'https://drive.google.com/file/d/1CmpHbLqoJzzzqyAbGLlKYVmoHore0mig/view',
+      },
+      {
         title: 'English Immersion Program ',
         url: 'https://drive.google.com/file/d/1ACdZuxp3oKc8HBjvbMysfYzPryGpzWDj/view',
       },

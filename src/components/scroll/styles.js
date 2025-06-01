@@ -7,14 +7,12 @@ export const ScrollWrapper = styled.div`
   font-size: 3.5rem;
   z-index: 1;
   cursor: pointer;
-  //color: #f2994a; // good orange
-  color: #b38867;
+  color: #009ddc;
   transition: transform 250ms;
 
   @media (hover: hover) {
     &:hover {
-      //color: #0ED2F7; // good orange
-      color: #ddbc95;
+      color: #0286b9;
       transition: 0.2s ease-in-out;
       transform: translateY(-4px);
     }
