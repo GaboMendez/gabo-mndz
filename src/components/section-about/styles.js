@@ -13,7 +13,7 @@ const fadeIn = keyframes`
 export const Title = styled.h1`
   color: #000;
   font-size: 2.4rem;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   align-self: ${(props) =>
     props.alignRight
       ? 'flex-end'
@@ -182,6 +182,7 @@ export const JobsWrapper = styled.div`
     grid-template-columns: 1fr;
     row-gap: 0rem;
     padding-top: 0rem;
+    margin-top: 1rem;
   }
 `;
 
@@ -384,8 +385,13 @@ export const DownloadWrapper = styled.a`
     }
   }
 
-  @media screen and (max-width: 420px) {
-    right: 14px;
+  @media screen and (max-width: 700px) {
+    right: 40px;
+    margin-top: 0px;
+  }
+
+    @media screen and (max-width: 420px) {
+    right: 10px;
     margin-top: 0px;
   }
 `;

@@ -121,10 +121,9 @@ const AboutSection = () => {
               <FaRegHdd size={26} /> Size: 88 kb
             </div>
           </DownloadWrapper>
-          <TextWrapper>
-            <Title> {topLine} </Title>
-            <Heading lightText={lightText}> {headLine} </Heading>
-          </TextWrapper>
+
+          <Title> {topLine} </Title>
+          <Heading lightText={lightText}> {headLine} </Heading>
           <SubTitle darkText={darkText}>{description}</SubTitle>
           <JobSection />
         </ColumnContent>

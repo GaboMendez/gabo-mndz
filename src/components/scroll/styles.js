@@ -19,10 +19,10 @@ export const ScrollWrapper = styled.div`
   }
 
   @media screen and (max-width: 1068px) {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 `;

@@ -1,34 +1,35 @@
 import styled from 'styled-components';
 
 export const SkillsContainer = styled.div`
-  height: 740px;
+  min-height: 740px;
   padding: 12px 74px 0;
+  padding-bottom: 30px !important;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background: #010606;
 
   @media screen and (max-width: 1150px) {
-    height: 1000px;
+    min-height: 1000px;
     padding: 0 68px;
   }
 
   @media screen and (max-width: 1068px) {
-    height: 940px;
+    min-height: 940px;
     padding: 0 64px;
   }
 
   @media screen and (max-width: 768px) {
-    height: 900px;
+    min-height: 900px;
     padding: 0 54px;
   }
 
   @media screen and (max-width: 568px) {
-    height: 1120px;
+    min-height: 1120px;
   }
 
   @media screen and (max-width: 480px) {
-    height: 1300px;
+    min-height: 1300px;
     padding: 0 44px;
   }
 `;
@@ -38,6 +39,7 @@ export const Title = styled.h1`
   font-size: 2.4rem;
   margin-bottom: 24px;
   align-self: ${(props) => (props.alignCenter ? 'center' : 'flex-start')};
+  text-align: center;
   position: relative;
   width: fit-content;
 
@@ -70,6 +72,8 @@ export const Title = styled.h1`
 
   @media screen and (max-width: 768px) {
     font-size: 1.9rem;
+    margin-left: 60px;
+    margin-right: 60px;
   }
 
   @media screen and (max-width: 568px) {

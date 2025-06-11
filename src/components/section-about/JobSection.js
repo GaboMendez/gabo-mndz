@@ -67,7 +67,7 @@ const jobs = [
 ];
 
 const JobSection = () => {
-  const isMobile = useMediaQuery('(max-width:780px)');
+  const isMobile = useMediaQuery('(max-width:1020px)');
 
   const [tabIndex, setTabIndex] = useState(0);
   const { company, position, date, descriptions, country } = jobs[tabIndex];

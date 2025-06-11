@@ -137,7 +137,7 @@ const TechSection = () => {
 
   return (
     <>
-      <Title>TECHNOLOGIES I'VE WORKED ON</Title>
+      <Title alignCenter>TECHNOLOGIES I'VE WORKED ON</Title>
       <TechContainer className='shadow-bg'>
         <Slider
           swipeToSlide={true}
