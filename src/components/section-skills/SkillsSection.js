@@ -20,23 +20,23 @@ const skills = [
     title: 'Front End Development',
     icon: <FaDesktop size={50} color={'#010606'} />,
     description:
-      'React, Next, TypeScript, JavaScript / ES6, SPA, Styled Components / CSS / SASS, HTML5',
+      'React, Next, Angular, TypeScript, JavaScript, Styled Components / CSS / SASS, Bootstrap, Material UI',
   },
   {
     title: 'Mobile Development',
     icon: <FaMobileAlt size={50} color={'#010606'} />,
-    description: 'Xamarin (MVVM, Prism), Kotlin (MVVM, MVP), Android SDK',
+    description: 'React Native (JS, TS), Kotlin (Android Native), Swift (iOS Native), Android SDK, iOS SDK',
   },
   {
     title: 'Back End Development',
     icon: <FaDatabase size={50} color={'#010606'} />,
     description:
-      'Oracle / SQL Server / PostgreSQL, Node, Spring Boot-Cloud, Java, C#, Rest API, OOP / Design Patterns',
+      'Oracle / SQL / PostgreSQL, Node, Spring Boot, Java, C#, Rest API, Design Patterns, Microservices',
   },
   {
     title: 'DevOps',
     icon: <FaCodeBranch size={70} color={'#010606'} />,
-    description: 'Git / Github / Gitlab, Jenkins, CI / CD, Openshift, Docker',
+    description: 'Git / Github / Gitlab, Jenkins, Azure DevOps, CI / CD, Openshift, Docker',
   },
 ];
 
