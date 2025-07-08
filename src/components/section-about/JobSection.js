@@ -20,7 +20,7 @@ const jobs = [
     company: 'Banco Popular',
     country: 'Dominican Republic',
     position: 'Software Engineer',
-    date: 'May 2021 - Jul 2022',
+    date: 'May 2022 - Jul 2022',
     descriptions: [
       'Developed and maintained microservices architecture using Nest and GraphQL APIs',
       'Built and deployed cross-platform mobile applications with React Native',
@@ -32,7 +32,7 @@ const jobs = [
     company: 'Xpert Code',
     position: 'Software Engineer',
     country: 'Dominican Republic',
-    date: 'Jan 2020 - May 2021',
+    date: 'Aug 2020 - May 2022',
     descriptions: [
       'Design and develop responsive and high-performance applications with React and Java Spring',
       'Collaborated with the designers to create beautiful and functional UI interfaces',
@@ -44,7 +44,7 @@ const jobs = [
     company: 'Caribe Media',
     position: 'Software Engineer',
     country: 'Dominican Republic',
-    date: 'March 2019 - Jan 2020',
+    date: 'Feb 2020 - Jul 2020',
     descriptions: [
       'Developer and Designer of Software Applications with React Native and Xamarin Forms',
       'Develop user stories, handle issues and communicate with the team using Azure DevOps',
@@ -56,7 +56,7 @@ const jobs = [
     company: 'Planeta Azul',
     position: 'Software Engineer',
     country: 'Dominican Republic',
-    date: 'October 2018 - March 2019',
+    date: 'Oct 2019 - Feb 2020',
     descriptions: [
       'Architected modular components using factory and repository patterns for better code reusability',
       'Developer and Designer of Software Applications with React and Xamarin Forms',

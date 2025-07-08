@@ -305,7 +305,7 @@ export const JobContainer = styled.div`
 
   .active-btn {
     color: #009ddc;
-    box-shadow: 0 2px #009ddc;
+    box-shadow: 0 0px #009ddc;
 
     @media screen and (max-width: 1100px) {
       background-color: rgba(0, 157, 220, 0.1);
