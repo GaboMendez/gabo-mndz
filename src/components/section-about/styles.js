@@ -284,9 +284,13 @@ export const JobContainer = styled.div`
     cursor: pointer;
     line-height: 1;
     white-space: nowrap;
+    color: #000;
+    -webkit-text-fill-color: #000;
+    -webkit-appearance: none;
 
     &:hover {
       color: #009ddc;
+      -webkit-text-fill-color: #009ddc;
       box-shadow: 0 2px #009ddc;
     }
 
@@ -305,6 +309,7 @@ export const JobContainer = styled.div`
 
   .active-btn {
     color: #009ddc;
+    -webkit-text-fill-color: #009ddc;
     box-shadow: 0 0px #009ddc;
 
     @media screen and (max-width: 1100px) {
@@ -333,12 +338,7 @@ export const JobContainer = styled.div`
     }
   }
 
-  @media screen and (min-width: 1100px) {
-    .job-btn {
-      margin-bottom: 1rem;
-      padding-right: 1rem;
-      &:hover {
-        box-shadow: 2px 0 #009ddc;
+  @media screen and
       }
     }
     .active-btn {
