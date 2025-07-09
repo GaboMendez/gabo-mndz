@@ -14,13 +14,18 @@ import {
 } from './styles';
 
 const HeroSection = () => {
-  const isMobile = useMediaQuery('(max-width:480px)');
+  const isMobile = useMediaQuery('(max-width:768px)');
+  
   return (
     <HeroContainer id='home'>
       <HeroBg>
-        <VideoBg autoPlay loop muted>
-          <source src='/video.mp4' type='video/mp4' />
-        </VideoBg>
+        {!isMobile ? (
+          <VideoBg autoPlay loop muted playsInline>
+            <source src='/video.mp4' type='video/mp4' />
+          </VideoBg>
+        ) : (
+          <div className="mobile-bg" />
+        )}
       </HeroBg>
 
       <CircleAvatar />

@@ -45,3 +45,14 @@ p {
   justify-content: center !important;
   min-height: 0 !important;
 }
+
+/* Mobile video fix */
+@media screen and (max-width: 768px) {
+  video {
+    display: none !important;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+}

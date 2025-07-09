@@ -37,6 +37,20 @@ export const HeroBg = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
+
+  .mobile-bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      #0c0c0c 0%,
+      #1a1a1a 50%,
+      #0c0c0c 100%
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 `;
 
 export const VideoBg = styled.video`
@@ -45,6 +59,7 @@ export const VideoBg = styled.video`
   -o-object-fit: cover;
   object-fit: cover;
   background: #232a34;
+
 `;
 
 export const HeroContent = styled.div`
