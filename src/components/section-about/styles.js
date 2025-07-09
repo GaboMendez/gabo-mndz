@@ -338,7 +338,12 @@ export const JobContainer = styled.div`
     }
   }
 
-  @media screen and
+  @media screen and (min-width: 1100px) {
+    .job-btn {
+      margin-bottom: 1rem;
+      padding-right: 1rem;
+      &:hover {
+        box-shadow: 2px 0 #009ddc;
       }
     }
     .active-btn {
