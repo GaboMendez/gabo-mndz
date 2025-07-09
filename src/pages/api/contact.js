@@ -1,12 +1,22 @@
 export default async (req, res) => {
   let nodemailer = require('nodemailer');
   require('dotenv').config();
+
+  if (
+    !process.env.EMAIL_USER ||
+    !process.env.EMAIL_PASSWORD ||
+    !process.env.EMAIL_TO
+  ) {
+    console.error('Missing required environment variables');
+    return res.status(500).json({ error: 'Server configuration error' });
+  }
+
   const transporter = nodemailer.createTransport({
     port: 465,
     host: 'smtp.gmail.com',
     auth: {
-      user: 'gabo.email.bot@gmail.com',
-      pass: process.env.password,
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASSWORD,
     },
     secure: true,
   });
@@ -25,8 +35,8 @@ export default async (req, res) => {
   });
 
   const mailData = {
-    from: 'gabo.email.bot@gmail.com',
-    to: 'gabriel.mendez0@hotmail.com',
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_TO,
     subject: `Message From ${req.body.name} ${req.body.lastname}`,
     text: req.body.message + ' | Sent from: ' + req.body.email,
     html: `<p>Hello Gabriel,</p>

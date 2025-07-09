@@ -31,6 +31,10 @@ const educationItems = [
     title: 'Course',
     certifications: [
       {
+        title: 'Diseño de interfaz de usuario (UI)',
+        url: 'https://drive.google.com/file/d/1iwgJkJfcSiOnCFs9NqqXiT-t34iAhRyf/view',
+      },
+      {
         title: 'Web development with HTML/CSS/JS',
         url: 'https://drive.google.com/file/d/12GkuxCQF8yK-dwi9G1SVsRpRIj1maNRE/view',
       },
@@ -39,8 +43,8 @@ const educationItems = [
         url: 'https://drive.google.com/file/d/1bAbKJEsGGmm4uGf4TMl9UAfebO7CTjL8/view',
       },
       {
-        title: 'Database Administrator',
-        url: 'https://drive.google.com/file/d/1EG1h2gZmwCsjRWy393fST9hyTKSnH2cI/view',
+        title: 'Kotlin for Android',
+        url: 'https://drive.google.com/file/d/1CmpHbLqoJzzzqyAbGLlKYVmoHore0mig/view',
       },
       {
         title: 'English Immersion Program ',
@@ -117,10 +121,9 @@ const AboutSection = () => {
               <FaRegHdd size={26} /> Size: 88 kb
             </div>
           </DownloadWrapper>
-          <TextWrapper>
-            <Title> {topLine} </Title>
-            <Heading lightText={lightText}> {headLine} </Heading>
-          </TextWrapper>
+
+          <Title> {topLine} </Title>
+          <Heading lightText={lightText}> {headLine} </Heading>
           <SubTitle darkText={darkText}>{description}</SubTitle>
           <JobSection />
         </ColumnContent>

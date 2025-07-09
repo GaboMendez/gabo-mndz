@@ -14,57 +14,81 @@ const technologies = [
   },
   {
     id: 2,
-    name: 'REACT',
-    img: '/tech/react.png',
-    link: 'https://reactjs.org/docs/getting-started.html',
-  },
-  {
-    id: 3,
     name: 'TYPESCRIPT',
     img: '/tech/ts.png',
     link: 'https://www.typescriptlang.org/docs/',
   },
   {
+    id: 3,
+    name: 'REACT',
+    img: '/tech/react.png',
+    link: 'https://reactjs.org/docs/getting-started.html',
+  },
+  {
     id: 4,
-    name: 'NODE',
-    img: '/tech/node_js.png',
-    link: 'https://nodejs.org/es/docs/',
+    name: 'ANGULAR',
+    img: '/tech/angular.png',
+    link: 'https://v15.angular.io/docs',
   },
   {
     id: 5,
+    name: 'NODE',
+    img: '/tech/node_js.png',
+    link: 'https://nodejs.org/en/docs/',
+  },
+  {
+    id: 6,
+    name: '.NET',
+    img: '/tech/dotnet.png',
+    link: 'https://learn.microsoft.com/en-us/dotnet/',
+  },
+  {
+    id: 7,
+    name: 'AZURE DEVOPS',
+    img: '/tech/azure.png',
+    link: 'https://learn.microsoft.com/en-us/azure/devops/?view=azure-devops',
+  },
+  {
+    id: 8,
     name: 'JENKINS',
     img: '/tech/jenkins.png',
     link: 'https://www.jenkins.io/doc/',
   },
   {
-    id: 6,
+    id: 9,
     name: 'OPENSHIFT',
     img: '/tech/openshift.png',
     link: 'https://docs.openshift.com/container-platform/4.7/welcome/index.html',
   },
   {
-    id: 7,
+    id: 10,
+    name: 'GIT LAB',
+    img: '/tech/gitlab.png',
+    link: 'https://docs.gitlab.com/',
+  },
+  {
+    id: 10,
     name: 'SPRING',
     img: '/tech/spring.png',
     link: 'https://spring.io/projects',
   },
   {
-    id: 8,
+    id: 11,
     name: 'JAVA',
     img: '/tech/java.png',
     link: 'https://www.tutorialspoint.com/java/index.htm',
   },
   {
-    id: 9,
+    id: 12,
     name: 'ORACLE',
     img: '/tech/oracle.png',
     link: 'https://www.techonthenet.com/oracle/index.php',
   },
   {
-    id: 10,
-    name: 'XAMARIN',
-    img: '/tech/xamarin.png',
-    link: 'https://docs.microsoft.com/en-us/xamarin/',
+    id: 13,
+    name: 'SQL',
+    img: '/tech/sql.png',
+    link: 'https://learn.microsoft.com/en-us/sql/?view=sql-server-ver17',
   },
 ];
 
@@ -137,7 +161,7 @@ const TechSection = () => {
 
   return (
     <>
-      <Title>TECHNOLOGIES I'VE WORKED ON</Title>
+      <Title alignCenter>TECHNOLOGIES I'VE WORKED ON</Title>
       <TechContainer className='shadow-bg'>
         <Slider
           swipeToSlide={true}
